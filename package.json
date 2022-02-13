@@ -27,7 +27,7 @@
     "file": "./static/logo.svg"
   },
   "engines": {
-    "npm": ">=14"
+    "node": ">=14"
   },
   "scripts": {
     "dev": "svelte-kit dev",
