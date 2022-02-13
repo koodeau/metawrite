@@ -3,7 +3,9 @@
 </p>
 
 > Versions `x.x.n` neans some minor changes to package documentation or typings.
+> 
 > Versions `x.n.x` might include some minor breaking changes.
+> 
 > Versions `n.x.x` might include some major breaking changes.
 
 ### Changelog

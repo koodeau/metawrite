@@ -7,8 +7,10 @@ Metawrite is [Appwrite](https://appwrite.io/) SDK with ready to go components fo
 This package is maintained by [Increasio](https://increas.io).
 
 > Note: versions `x.x.n` neans some minor changes to package documentation or typings.
-> versions `x.n.x` might include some minor breaking changes. See [Release Notes](https://github.com/koodeau/metawrite#changelog).
-> versions `n.x.x` might include some major breaking changes. See [Release Notes](https://github.com/koodeau/metawrite#changelog).
+> 
+> versions `x.n.x` might include some minor breaking changes. See [Release Notes](https://github.com/koodeau/metawrite/blob/main/CHANGELOG.md).
+> 
+> versions `n.x.x` might include some major breaking changes. See [Release Notes](https://github.com/koodeau/metawrite/blob/main/CHANGELOG.md).
 
 # Documentation
 
