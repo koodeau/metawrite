@@ -2,6 +2,25 @@
   <img alt="Metawrite" src="static/logo.svg" />
 </p>
 
+<a href="https://www.npmjs.com/package/metawrite">
+  <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
+</a>
+
+<a href="https://classic.yarnpkg.com/en/package/metawrite">
+  <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" />
+</a>
+
+# Support Us 
+
+Get free $100 credits on DigitalOcean:
+<a href="https://m.do.co/c/843c1f24ad90">
+  <img src="https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white" />
+</a>
+
+<a href="https://discord.gg/n3WZxtbkCm">
+  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+</a>
+
 Metawrite is [Appwrite](https://appwrite.io/) SDK with ready to go components for `Svelte` / `SvelteKit`
 
 This package is maintained by [Increasio](https://increas.io).
@@ -30,6 +49,7 @@ yarn add metawrite
 
 # Table of contents
 
+- [Support Us](#support-us)
 - [Documentation](#documentation)
     - [Installation](#installation)
 - [Table of contents](#table-of-contents)
@@ -191,6 +211,7 @@ yarn add metawrite
       - [Slots](#slots-12)
       - [Directives](#directives-34)
       - [Example](#example-28)
+- [Stack](#stack)
 
 # Usage
 
@@ -1632,3 +1653,8 @@ The Locale components allow you to customize your app based on your users' locat
 	{/each}
 </PhoneCodes>
 ```
+
+# Stack
+<img src="https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
