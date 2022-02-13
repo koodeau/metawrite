@@ -150,34 +150,34 @@ yarn add metawrite
       - [Example](#example-21)
   - [Functions](#functions)
     - [`<Function />`](#function-)
-      - [Directioves](#directioves)
+      - [Directives](#directives-28)
       - [Slots](#slots-6)
       - [Example](#example-22)
   - [Locale](#locale)
     - [`<Continents />`](#continents-)
-      - [Directives](#directives-28)
+      - [Directives](#directives-29)
       - [Slots](#slots-7)
       - [Example](#example-23)
     - [`<Countries />`](#countries-)
       - [Arguments](#arguments-18)
       - [Slots](#slots-8)
-      - [Directives](#directives-29)
+      - [Directives](#directives-30)
       - [Example](#example-24)
     - [`<Currencies />`](#currencies-)
       - [Slots](#slots-9)
-      - [Directives](#directives-30)
+      - [Directives](#directives-31)
       - [Example](#example-25)
     - [`<Languages />`](#languages-)
       - [Slots](#slots-10)
-      - [Directives](#directives-31)
+      - [Directives](#directives-32)
       - [Example](#example-26)
     - [`<Locale />`](#locale-)
       - [Slots](#slots-11)
-      - [Directives](#directives-32)
+      - [Directives](#directives-33)
       - [Example](#example-27)
     - [`<PhoneCodes />`](#phonecodes-)
       - [Slots](#slots-12)
-      - [Directives](#directives-33)
+      - [Directives](#directives-34)
       - [Example](#example-28)
 
 # Usage
@@ -1341,7 +1341,7 @@ You can learn more by following Appwrite's [Cloud Functions tutorial](https://ap
 
 ### `<Function />`
 
-#### Directioves
+#### Directives
 
 **let:actions**
 | Name | Description |
