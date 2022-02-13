@@ -29,6 +29,10 @@
   "engines": {
     "node": ">=14"
   },
+  "publishConfig": {
+    "@koodeau:registry": "https://npm.pkg.github.com",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
