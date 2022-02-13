@@ -10,21 +10,23 @@
   <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" />
 </a>
 
-
-[![npm Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml)  [![Github Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml)
-
 # Support Us 
 
-Get free $100 credits on DigitalOcean:
+**Get free $100 credits on DigitalOcean:**
+
 <a href="https://m.do.co/c/843c1f24ad90">
   <img src="https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white" />
 </a>
+
+**Join our Discord:**
 
 <a href="https://discord.gg/n3WZxtbkCm">
   <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
 </a>
 
 ---
+
+[![npm Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml)  [![Github Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml)
 
 Metawrite is [Appwrite](https://appwrite.io/) SDK with ready to go components for `Svelte` / `SvelteKit`
 
