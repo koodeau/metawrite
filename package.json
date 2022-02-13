@@ -41,7 +41,7 @@
     "typings": "sveld --markdown",
     "svelte-check": "svelte-check",
     "version": "auto-changelog -p --hide-credit --template changelog.hbs && git add CHANGELOG.md",
-    "test": "svelte-check --tsconfig ./tsconfig.json && sveld --markdown && svelte-check"
+    "test": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
