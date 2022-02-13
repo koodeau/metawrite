@@ -25,3 +25,40 @@
 {:catch error}
   <slot name="error" {error} />
 {/await}
+
+<!-- 
+  @component
+
+### `<Continents />`
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+
+- **let:continents**
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Example 
+
+```svelte
+<script>
+    import { Continents } from "metawrite"
+</script>
+
+<Continents let:actions let:continents>
+    <button on:click={actions.reload()}>Reload</button>
+    <p>There are {continents.sum} continents:</p>
+    {#each continents.continents as continent}
+        <p>{continent.name}, {continent.code}</p>
+    {/each}
+</Continents>
+```
+
+ -->

@@ -25,3 +25,40 @@
 {:catch error}
   <slot name="error" {error} />
 {/await}
+
+<!-- 
+  @component
+  
+### `<PhoneCodes />`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+
+- **let:codes**
+
+#### Example 
+
+```svelte
+<script>
+	import { PhoneCodes } from 'metawrite';
+</script>
+
+<PhoneCodes let:actions let:codes>
+	<button on:click={actions.reload()}>Reload</button>
+	<p>There are {codes.sum} phone codes:</p>
+	{#each codes.phones as phone}
+		<p>{phone.code} - {phone.countyName}></p>
+	{/each}
+</PhoneCodes>
+```
+  
+ -->

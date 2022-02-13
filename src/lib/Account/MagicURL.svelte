@@ -26,7 +26,35 @@
 
 <!--
 @component
+
 Creates Magic URL Session.
+
+### `<MagicURL />`
+
+#### Directives
+
+**let:actions**
+
+| Name                        | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `create()` | Creates Magic URL Session. |
+
+#### Example 
+
+```svelte
+<script>
+    import { MagicURL } from "metawrite";
+
+    const userId = "32h2hj24h2"
+    const email = "user@example.com"
+    const url = "http://example.com" // optional
+</script>
+
+<MagicURL let:actions>
+    <button on:click={actions.create(userId, email, url)}>Create MagicURL</button>
+</MagicURL>
+```
+
 -->
 
 {#if $active}

@@ -100,4 +100,60 @@
       {/await}
     {/if}
   {/if}
+
+<!-- 
+  @component
+  
+  ### `<User />`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+| `logout()` | Logout current session. |
+| `logoutAll()` | Logout from all session. |
+| `logoutFrom(session)` | Logout from specific session. `session` is `@type - {string}` |
+
+- **let:user** `object`
+- **let:error**
+
+#### Events
+
+- **on:success** On user fetch success.
+- **on:failure** On user fetch failure.
+- **on:successLogout** On `logout` success.
+- **on:failureLogout** On `logout` failure.
+- **on:successLogoutFrom** On `logoutFrom` success.
+- **on:failureLogoutFrom** On `logoutFrom` failure.
+- **on:successLogoutAll** On `logoutAll` success.
+- **on:failureLogoutAll** On `logoutAll` failure.
+
+#### Example
+
+```svelte
+<script>
+    import { User } from "metawrite"
+</script>
+
+<User let:actions let:user>
+    <button on:click={actions.reload()}>Reload user data</button>
+    <button on:click={actions.get()}>Get logged in user data</button>
+    <button on:click={actions.logout()}>Log out from current session</button>
+    <button on:click={actions.logoutFrom("sessionId")}>Log out from specific session</button>
+    <button on:click={actions.logoutAll()}>Log out from all sessions</button>
+
+    <!-- If logged in -->
+    <p>Hi, {user.name}</p>
+</User>
+```
+
+  
+ -->
   

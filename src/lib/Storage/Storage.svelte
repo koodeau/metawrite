@@ -41,3 +41,38 @@
 </script>
 
 <slot {actions} />
+
+<!-- 
+  @component
+
+### `<Storage />`
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `create(fileId, file, read, write)` | Uploads a file. <br />`fileId` is required `@type - {string}`, `"unique()"` will generate random unique id, but you can use custom.<br />`file` is `@type - {File}` and required.<br />`read`/`write` is `@type - {string[]}` and *optional* |
+
+- **let:files**
+
+#### Example
+
+```svelte
+<script>
+    import { Storage } from "metawrite"
+
+    // Required
+    /**@type {File}*/ let file;
+    /**@type {string}*/ let fileId = "unique()"; // this will generate random unique id, but you can use custom
+
+    // Optional
+    /**@type {string[]}*/ let read;
+    /**@type {string[]}*/ let write;
+</script>
+
+<Storage {file} let:actions>
+    <button on:click={actions.create(fileId, file, read, write)}>Upload File</button>
+</Storage>
+```
+ -->

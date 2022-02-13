@@ -10,3 +10,32 @@
 </script>
 
 <slot {src} />
+
+<!-- 
+  @component
+
+### `<Flag />`
+
+#### Arguments
+
+- code - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {string}`
+- quality - *optional* `@type - {string}`
+
+#### Directives
+
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+    import { Flag } from "metawrite"
+</script>
+
+<Flag code="canada" let:src>
+    <img src={String(src)} alt="flag" />
+</Flag>
+```
+ -->

@@ -93,3 +93,53 @@
 {:else}
 	<slot {actions} />
 {/if}
+
+<!-- 
+	@component
+	
+### `<Document />`
+
+#### Arguments
+
+- documentId - *required* `@type - {string}`
+- collectionId - *required* `@type - {string}`
+- document - `Promise<any>`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+| `update(data)` | Updates a Document. `data` - `@type - {object}` |
+| `remove()` | Removes a Document. |
+
+- **let:document**
+- **let:error**
+
+#### Example
+
+```svelte
+<script>
+	import { Collection, Document } from 'metawrite';
+
+	const collectionId = '5f56a3035a01f';
+</script>
+
+<Collection {collectionId} let:documents>
+	You have {documents.length} documents:
+	{#each documents as document}
+		<Document {collectionId} documentId={document.$id} {document}>
+			Title: {document.title}
+			Text: {document.text}
+		</Document>
+	{/each}
+</Collection>
+```
+	
+ -->

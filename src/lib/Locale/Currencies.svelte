@@ -25,3 +25,40 @@
 {:catch error}
   <slot name="error" {error} />
 {/await}
+
+<!-- 
+  @component
+  
+### `<Currencies />`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+
+- **let:currencies**
+
+#### Example 
+
+```svelte
+<script>
+    import { Currencies } from "metawrite"
+</script>
+
+<Currencies let:actions let:currencies>
+    <button on:click={actions.reload()}>Reload</button>
+    <p>There are {currencies.sum} currencies:</p>
+    {#each currencies.currencies as currency}
+        <p>{currency.symbol} - {currency.name} ({currency.code})</p>
+    {/each}
+</Currencies>
+```
+  
+ -->

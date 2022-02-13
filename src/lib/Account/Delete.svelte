@@ -26,7 +26,44 @@
   
   <!--
   @component
+
   Deletes currently logged in user's account.
+
+  ### `<Delete />`
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `delete()` | Deletes currently logged in user. |
+
+#### Events
+
+- **on:success** On `delete` success.
+- **on:failure** On `delete` failure.
+
+#### Example
+
+```svelte
+<script>
+    import { Delete } from "metawrite";
+
+    const success = e => {
+    //success callback
+    // `e` contains the user object
+  };
+
+  const failure = e => {
+    //failure callback
+  }
+</script>
+
+<Delete let:actions on:success on:failure>
+    <button on:click={actions.delete}>Delete my account</button>
+</Delete>
+```
+
 
   > Account is only getting blocked to prevent someone using same credentials to sign up.
   -->

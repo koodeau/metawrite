@@ -50,3 +50,44 @@
 {#if $active}
 	<slot {actions} />
 {/if}
+
+<!-- 
+	@component
+	
+### `<Update />`
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `name(name)` | Update name. All fields are required. `@type - {string}` |
+| `email(email, password)` | Update email. All fields are required. `@type - {string}` |
+| `password(password, oldPassword)` | Update password. All fields are required. `@type - {string}` |
+
+#### Events
+
+- **on:successName** On `name` success.
+- **on:failureName** On `name` failure.
+- **on:successEmail** On `email` success.
+- **on:failureEmail** On `email` failure.
+- **on:successPassword** On `password` success.
+- **on:failurePassword** On `password` failure.
+
+#### Example 
+
+```svelte
+<script>
+    import { Update } from "metawrite"
+
+    let name, email, password, newPassword, oldPassword = ""
+</script>
+
+<Update let:actions>
+    <button on:click={actions.name(name)}>This updates name</button>
+    <button on:click={actions.email(email, password)}>This updates email</button>
+    <button on:click={actions.password(newPassword, oldPassword)}>This updates password</button>
+</Update>
+```
+	
+ -->

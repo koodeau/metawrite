@@ -49,3 +49,50 @@
 		<slot name="error" {error} />
 	{/await}
 {/if}
+
+<!-- 
+	@component
+
+### `<Preferences />`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reloads preferences. |
+| `update(prefs)` | Update preferences. `prefs` - `@type - {object}` |
+
+#### Events
+
+- **on:success** On init and `reload` success.
+- **on:failure** On init and `reload` failure.
+- **on:successUpdate** On `update` success.
+- **on:failureUpdate** On `update` failure.
+
+#### Example 
+
+```svelte
+<script>
+	import { Preferences } from 'metawrite';
+
+	let prefs = {
+		// You can pass only the specific settings you wish to update.
+	};
+</script>
+
+<Preferences let:actions>
+	<button
+		on:click={() => {
+			actions.update(prefs);
+			actions.reload();
+		}}>Update Preferences</button>
+</Preferences>
+```
+
+ -->

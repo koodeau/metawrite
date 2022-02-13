@@ -42,3 +42,53 @@
     <slot name="error" {error} />
   {/await}
 {/if}
+
+<!-- 
+  @component
+  
+### `<AuthEmail />`
+
+#### Slots
+
+- **loading**
+- **success**
+- **error**
+
+#### Directives
+
+- **let:authorize(email, password)**
+- **let:user** 
+- **let:error**
+
+#### Events
+
+- **on:success** On `authorize` success.
+- **on:failure** On `authorize` failure.
+
+#### Example
+
+```svelte
+<script>
+    import { AuthEmail } from "metawrite";
+  
+    let email = "";
+    let password = "";
+  
+    const success = e => {
+      //success callback
+      // `e` contains the user object
+    };
+  
+    const failure = e => {
+      //failure callback
+    }
+  </script>
+  
+  <AuthEmail let:authorize on:success on:failure>
+    <input type="text" bind:value={email}>
+    <input type="text" bind:value={password}>
+    <button on:click={authorize(email,password)}>Login</button>
+  </AuthEmail>
+```
+  
+ -->

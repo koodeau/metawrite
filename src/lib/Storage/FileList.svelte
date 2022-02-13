@@ -29,3 +29,52 @@
 {:catch error}
   <slot name="error" {error} />
 {/await}
+
+<!-- 
+  @component
+
+### `<FileList />`
+
+#### Arguments
+
+- search - *optional* `@type - {string}`
+- limit - *optional* `@type - {number}`
+- offset - *optional* `@type - {number}`
+- orderType - *optional* `@type - {string} ` => write  `"ASC"` or `"DESC"`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+
+- **let:files**
+- **let:error**
+
+#### Example 
+
+```svelte
+<script>
+    import { FileList } from "metawrite"
+
+    // Optional
+    let search = '';
+    let limit = 10;
+    let offset = 0;
+    let orderType = 'ASC';
+</script>
+
+<FileList {search} {limit} {offset} {orderType}let:actions let:files>
+    {#each files as file}
+        <p>File: {file.name}</p>
+    {/each}
+    <button on:click={actions.reload()}>Reload</button>
+</FileList>
+```
+ -->

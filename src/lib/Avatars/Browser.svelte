@@ -10,3 +10,33 @@
 </script>
 
 <slot {src} />
+
+<!-- 
+  @component 
+
+### `<Browser />`
+
+#### Arguments
+
+- code - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {string}`
+- quality - *optional* `@type - {string}`
+
+#### Directives
+
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+    import { Browser } from "metawrite"
+</script>
+
+<Browser code="firefox" let:src>
+    <img src={String(src)} alt="Browser" />
+</Browser>
+```
+ -->
+ 

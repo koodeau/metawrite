@@ -25,3 +25,40 @@
 {:catch error}
   <slot name="error" {error} />
 {/await}
+
+<!-- 
+  @component
+  
+### `<Languages />`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+
+- **let:languages**
+
+#### Example 
+
+```svelte
+<script>
+	import { Languages } from 'metawrite';
+</script>
+
+<Languages let:actions let:languages>
+	<button on:click={actions.reload()}>Reload</button>
+	<p>There are {languages.sum} languages:</p>
+	{#each languages.languages as language}
+		<p>{language.name}, {language.code}></p>
+    {/each}
+</Languages>
+```
+  
+ -->

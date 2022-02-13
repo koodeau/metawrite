@@ -75,3 +75,60 @@
 {:catch error}
 	<slot name="error" {error} />
 {/await}
+
+<!-- 
+	@component
+
+### `<Collection />`
+
+#### Arguments
+
+- collectionId - *required* `@type - {string}`
+
+- Cache - *optional*, by default set to false `@type - {boolean}`
+
+  **query: `@type - {object}`**
+
+- filters - *optional* `@type - {string[]}`
+
+- offset - *optional* `@type - {number}`
+
+- limit - *optional* `@type - {number}`
+
+- orderField - *optional* `@type - {string}`
+
+- orderType - *optional* `@type - {string}`
+
+- orderCast - *optional* `@type - {string[]}`
+
+- search - *optional* `@type - {string[]}`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+| `create(data, read, write)` | Creates a Document. `data` - `@type - {string}`.<br /> `read`/`write` is optional `@type - {string[]}` |
+
+- **let:documents**
+- **let:error**
+
+#### Example 
+
+```svelte
+<script>
+  import { Collection } from "metawrite";
+</script>
+
+<Collection collectionId="5f56a3035a01f" let:documents>
+  You have {documents.length} documents.
+</Collection>
+```
+
+ -->

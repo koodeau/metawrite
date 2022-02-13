@@ -28,3 +28,35 @@
 {#if $active}
 	<slot />
 {/if}
+
+<!-- 
+	@component
+	
+## Initialize
+
+Must be initialised and wrap every `metawrite` component.
+
+```svelte
+<script>
+  import { Appwrite } from "metawrite";
+
+  const config = {
+    endpoint: "http://localhost/v1",
+    project: "demo", 
+    locale: "fr",
+  };
+</script>
+
+<Appwrite {...config}>
+  ...
+</Appwrite>
+```
+
+### Properties
+| Name | Description |
+| --- | --- |
+| `endpoint` | Your Appwrite endpoint. `@type - {string}` |
+| `project` | Your project ID. `@type - {string}` |
+| `locale` | _Optional_ The users locale. `@type - {string}` |
+	
+ -->

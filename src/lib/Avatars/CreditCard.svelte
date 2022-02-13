@@ -10,3 +10,33 @@
 </script>
 
 <slot {src} />
+
+<!-- 
+  @component
+
+### `<CreditCard />`
+
+#### Arguments
+
+- code - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {string}`
+- quality - *optional* `@type - {string}`
+
+#### Directives
+
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+    import { CreditCard } from "metawrite"
+</script>
+
+<CreditCard code="amex" let:src>
+    <img src={String(src)} alt="card" />
+</CreditCard>
+```
+
+ -->

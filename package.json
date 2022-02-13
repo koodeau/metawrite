@@ -2,7 +2,7 @@
   "name": "metawrite",
   "svelte": "src/lib/index.js",
   "license": "BSD-3-Clause",
-  "version": "0.0.0-next.0",
+  "version": "0.0.0",
   "description": "Appwrite SDK with ready to go components for Svelte / SvelteKit",
   "keywords": [
     "svelte",
@@ -12,7 +12,8 @@
     "components",
     "library"
   ],
-  "homepage": "https://github.com/koodeau/metawrite#readme",
+  "repository": "github:koodeau/metawrite",
+  "homepage": "https://increas.io/metawrite",
   "bugs": {
     "url": "https://github.com/koodeau/metawrite/issues",
     "email": "koodeau@null.net"
@@ -22,9 +23,8 @@
     "email": "koodeau@null.net",
     "url": "https://koodeau.me/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/koodeau/metawrite.git"
+  "logo": {
+    "file": "./static/logo.svg"
   },
   "engines": {
     "npm": ">=14"
@@ -39,13 +39,16 @@
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "typings": "sveld --markdown",
-    "svelte-check": "svelte-check"
+    "svelte-check": "svelte-check",
+    "version": "auto-changelog -p --hide-credit --template changelog.hbs && git add CHANGELOG.md",
+    "test": "svelte-check --tsconfig ./tsconfig.json && sveld --markdown && svelte-check"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "auto-changelog": "^2.4.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",

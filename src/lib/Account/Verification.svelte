@@ -51,4 +51,36 @@
   
   - `url` of type string for action `create` should be where your app is hosted or `localhost`.
   - For `update` action you don't need to pass anything, the process is automated.
+
+### `<Verification />`
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `create(url)` | Create Verification. `url` is what URL used to create verification link sent to your email inbox. `@type - {string}` |
+| `update(user, secret)` | Complete Verification. `user` and `secret` are set automatically by `metawrite`. |
+
+#### Events
+
+- **on:successCreate** On `create` success.
+- **on:failureCreate** On `create` failure.
+- **on:successComplete** On `complete` success.
+- **on:failureComplete** On `complete` failure.
+
+#### Example
+
+```svelte
+<script>
+    import { Verification } from "metawrite"
+
+    const url = window.location.href;
+</script>
+
+<Verification let:actions>
+    <button on:click={actions.create(url)}></button>
+    <button on:click={actions.update()}>Update email verification status</button>
+</Verification>
+```
   -->
