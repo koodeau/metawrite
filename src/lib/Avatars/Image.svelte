@@ -1,7 +1,7 @@
 <script>
   import { SDK as Appwrite } from "../appwrite";
 
-  export let url;
+  export let url = "";
   export let width;
   export let height;
 

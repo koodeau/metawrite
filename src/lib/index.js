@@ -30,6 +30,8 @@ export { default as Languages } from "./Locale/Languages.svelte";
 export { default as Flag } from "./Avatars/Flag.svelte";
 export { default as Browser } from "./Avatars/Browser.svelte";
 export { default as CreditCard } from "./Avatars/CreditCard.svelte";
+export { default as Currencies } from "./Avatars/Currencies.svelte";
+export { default as PhoneCodes } from "./Avatars/PhoneCodes.svelte";
 export { default as Favicon } from "./Avatars/Favicon.svelte";
 export { default as Image } from "./Avatars/Image.svelte";
 export { default as QR } from "./Avatars/QR.svelte";

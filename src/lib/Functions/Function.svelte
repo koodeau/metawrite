@@ -11,8 +11,8 @@
    */
   import { SDK as Appwrite } from "../appwrite";
 
-  export let functionId;
-  export let data;
+  export let functionId = '';
+  export let data = '';
   export let limit = 25;
   export let offset = 0;
   export let cursor = "";
@@ -24,7 +24,7 @@
   const actions = {
     // @ts-ignore
     reload: () => (documents = fetchExecutions()),
-    create: async () => {
+    create: async (/** @type {string} */ functionId, /** @type {string} */ data) => {
       const response = await Appwrite.sdk.functions.createExecution(functionId, data);
       actions.reload();
       return response;

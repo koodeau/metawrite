@@ -11,6 +11,12 @@
 	import { active } from '../stores';
 	import { SDK as Appwrite } from '../appwrite';
 
+  const href = window.location.href;
+	const url = new URL(href);
+	const search = url.searchParams;
+	const userId = search.get('userId');
+	const secret = search.get('secret');
+
 	const dispatch = createEventDispatcher();
 	const actions = {
 		recover: async (/** @type {string} */ email, /** @type {string} */ url) => {
@@ -23,14 +29,12 @@
 			}
 		},
 		complete: async (
-			/** @type {string} */ user,
-			/** @type {string} */ secret,
 			/** @type {string} */ password,
 			/** @type {string} */ passwordAgain
 		) => {
 			try {
 				const response = await Appwrite.sdk.account.updateRecovery(
-					user,
+					userId,
 					secret,
 					password,
 					passwordAgain

@@ -1,56 +1,184 @@
-# appwrite-svelte (Beta)
+# Metawrite
 
-Appwrite SDK with ready to go components for `Svelte` / `SvelteKit`
+[Appwrite](https://appwrite.io/) SDK with ready to go components for `Svelte` / `SvelteKit`
 
-Easy to use [Appwrite](https://appwrite.io/) components for Svelte. Install it:
+### Installation
+
+Using NPM:
 
 ```bash
-npm install appwrite-svelte
-# or 
-yarn add appwrite-svelte
+npm install metawrite
+```
+
+Using Yarn:
+
+```bash
+yarn add metawrite
 ```
 
 # Table of contents
 
+- [Metawrite](#metawrite)
+    - [Installation](#installation)
+- [Table of contents](#table-of-contents)
 - [Usage](#usage)
   - [Initialize](#initialize)
+    - [Properties](#properties)
   - [Create user](#create-user)
+    - [Directives](#directives)
+      - [Arguments](#arguments)
+    - [Events](#events)
+      - [Arguments](#arguments-1)
+      - [Arguments](#arguments-2)
   - [Login via Email](#login-via-email)
+    - [Directives](#directives-1)
+      - [Arguments](#arguments-3)
+    - [Events](#events-1)
+      - [Arguments](#arguments-4)
+      - [Arguments](#arguments-5)
   - [Login via OAuth2](#login-via-oauth2)
+    - [Properties](#properties-1)
+    - [Directives](#directives-2)
   - [Get user](#get-user)
+    - [Directives](#directives-3)
   - [Get Collection](#get-collection)
+    - [Properties](#properties-2)
+    - [Directives](#directives-4)
+      - [Arguments](#arguments-6)
   - [Get Document](#get-document)
+    - [Properties](#properties-3)
+    - [Directives](#directives-5)
+      - [Arguments](#arguments-7)
+    - [Events](#events-2)
 - [API](#api)
   - [Account](#account)
     - [`<User />`](#user-)
+      - [Slots](#slots)
+      - [Directives](#directives-6)
+      - [Events](#events-3)
+      - [Example](#example)
     - [`<Create />`](#create-)
+      - [Directives](#directives-7)
+      - [Events](#events-4)
+      - [Example](#example-1)
     - [`<Delete />`](#delete-)
+      - [Directives](#directives-8)
+      - [Events](#events-5)
+      - [Example](#example-2)
     - [`<Preferences />`](#preferences-)
+      - [Slots](#slots-1)
+      - [Directives](#directives-9)
+      - [Events](#events-6)
+      - [Example](#example-3)
     - [`<RecoverPassword />`](#recoverpassword-)
+      - [Directives](#directives-10)
+      - [Events](#events-7)
+      - [Example](#example-4)
     - [`<Update />`](#update-)
+      - [Directives](#directives-11)
+      - [Events](#events-8)
+      - [Example](#example-5)
+    - [`<Verification />`](#verification-)
+      - [Directives](#directives-12)
+      - [Events](#events-9)
+      - [Example](#example-6)
   - [Auth](#auth)
     - [`<AuthEmail />`](#authemail-)
+      - [Slots](#slots-2)
+      - [Directives](#directives-13)
+      - [Events](#events-10)
+      - [Example](#example-7)
     - [`<AuthOAuth2 />`](#authoauth2-)
+      - [Properties](#properties-4)
+      - [Example](#example-8)
+    - [`<CreateAnonymousSession />`](#createanonymoussession-)
+      - [Directives](#directives-14)
+      - [Example](#example-9)
+    - [`<CreateJWT />`](#createjwt-)
+      - [Directives](#directives-15)
+      - [Example](#example-10)
+    - [`<MagicURL />`](#magicurl-)
+      - [Directives](#directives-16)
+      - [Example](#example-11)
   - [Avatars](#avatars)
     - [`<Browser />`](#browser-)
+      - [Arguments](#arguments-8)
+      - [Directives](#directives-17)
+      - [Example](#example-12)
     - [`<CreditCard />`](#creditcard-)
+      - [Arguments](#arguments-9)
+      - [Directives](#directives-18)
+      - [Example](#example-13)
     - [`<Favicon />`](#favicon-)
+      - [Arguments](#arguments-10)
+      - [Directives](#directives-19)
     - [`<Flag />`](#flag-)
+      - [Arguments](#arguments-11)
+      - [Directives](#directives-20)
+      - [Example](#example-14)
     - [`<Image />`](#image-)
+      - [Arguments](#arguments-12)
+      - [Directives](#directives-21)
+      - [Example](#example-15)
     - [`<QR />`](#qr-)
+      - [Arguments](#arguments-13)
+      - [Directives](#directives-22)
+      - [Example](#example-16)
   - [Database](#database)
     - [`<Collection />`](#collection-)
+      - [Arguments](#arguments-14)
+      - [Slots](#slots-3)
+      - [Directives](#directives-23)
+      - [Example](#example-17)
     - [`<Document />`](#document-)
+      - [Arguments](#arguments-15)
+      - [Slots](#slots-4)
+      - [Directives](#directives-24)
+      - [Example](#example-18)
   - [Storage](#storage)
     - [`<Storage />`](#storage-)
+      - [Directives](#directives-25)
+      - [Example](#example-19)
     - [`<FileList />`](#filelist-)
+      - [Arguments](#arguments-16)
+      - [Slots](#slots-5)
+      - [Directives](#directives-26)
+      - [Example](#example-20)
     - [`<File />`](#file-)
+      - [Arguments](#arguments-17)
+      - [Directives](#directives-27)
+      - [Example](#example-21)
+  - [Functions](#functions)
+    - [`<Function />`](#function-)
+      - [Directioves](#directioves)
+      - [Slots](#slots-6)
+      - [Example](#example-22)
   - [Locale](#locale)
     - [`<Continents />`](#continents-)
+      - [Directives](#directives-28)
+      - [Slots](#slots-7)
+      - [Example](#example-23)
     - [`<Countries />`](#countries-)
+      - [Arguments](#arguments-18)
+      - [Slots](#slots-8)
+      - [Directives](#directives-29)
+      - [Example](#example-24)
     - [`<Currencies />`](#currencies-)
+      - [Slots](#slots-9)
+      - [Directives](#directives-30)
+      - [Example](#example-25)
+    - [`<Languages />`](#languages-)
+      - [Slots](#slots-10)
+      - [Directives](#directives-31)
+      - [Example](#example-26)
     - [`<Locale />`](#locale-)
+      - [Slots](#slots-11)
+      - [Directives](#directives-32)
+      - [Example](#example-27)
     - [`<PhoneCodes />`](#phonecodes-)
+      - [Slots](#slots-12)
+      - [Directives](#directives-33)
+      - [Example](#example-28)
 
 # Usage
 
@@ -58,26 +186,26 @@ yarn add appwrite-svelte
 
 **Psuedo Example**
 
-Handle multiple levels of async relational data (and their loading & fallback states) entirely from the Svelte HTML. 
+Handle multiple levels of async relational data (and their loading & fallback states) entirely from the Svelte markup. 
 
 
 ```svelte
 <!-- 1. 💪 Appwrite App -->
 <Appwrite {...config}>
 
-    <!-- 2. 😀 Get the current user -->
+    <!-- 2. 😀 Get the current user if logged in -->
     <User let:user>
 
         <h1>Hello {user.name}!</h1>
 
         <!-- 3. 📚 Get all the documents from a collection -->
-        <Collection collection="5f56a3035a01f" let:documents>
+        <Collection collectionId="5f56a3035a01f" let:documents>
             You have {documents.length} documents.
             
             {#each documents as document}
 
                 <!-- 4. 📜 Get a document -->
-                <Document {document}>
+                <Document collectionId="5f56a3035a01f" documentId={document.$id} {document}>
                     Title: {document.title}
                     Text: {document.text}
 ...
@@ -85,16 +213,16 @@ Handle multiple levels of async relational data (and their loading & fallback st
 
 ## Initialize
 
-Must be initialised and wrap every `svelte-appwrite` component.
+Must be initialised and wrap every `metawrite` component.
 
 ```svelte
 <script>
-  import { Appwrite } from "svelte-appwrite";
+  import { Appwrite } from "metawrite";
 
   const config = {
     endpoint: "http://localhost/v1",
-    project: "5f4938898667e",
-    locale: "de",
+    project: "demo", 
+    locale: "fr",
   };
 </script>
 
@@ -106,9 +234,9 @@ Must be initialised and wrap every `svelte-appwrite` component.
 ### Properties
 | Name | Description |
 | --- | --- |
-| `endpoint` | Your Appwrite endpoint |
-| `project` | Your project ID |
-| `locale` | _Optional_ The users locale |
+| `endpoint` | Your Appwrite endpoint. `@type - {string}` |
+| `project` | Your project ID. `@type - {string}` |
+| `locale` | _Optional_ The users locale. `@type - {string}` |
 
 ## Create user
 
@@ -116,7 +244,7 @@ Registers a new account.
 
 ```svelte
 <script>
-  import { Create } from "svelte-appwrite";
+  import { Create } from "metawrite";
 
   let email = "";
   let password = "";
@@ -149,7 +277,7 @@ Object with function.
 #### Arguments
 | Name | Description |
 | --- | --- |
-| `create(email, password, name)` | Registers a new user. |
+| `create(email, password, name)` | Registers a new user.  `@type - {string}` |
 
 ### Events
 
@@ -177,7 +305,7 @@ Login via email and password.
 
 ```svelte
 <script>
-  import { AuthEmail } from "svelte-appwrite";
+  import { AuthEmail } from "metawrite";
 
   let email = "";
   let password = "";
@@ -208,8 +336,8 @@ Initiates login.
 #### Arguments
 | Name | Description |
 | --- | --- |
-| `email` | E-Mail |
-| `password` | Password |
+| `email` | E-Mail. `@type - {string}` |
+| `password` | Password. `@type - {string}` |
 
 ### Events
 
@@ -220,7 +348,7 @@ Triggers on successful login.
 #### Arguments
 | Name | Description |
 | --- | --- |
-| `email` | E-Mail |
+| `email` | E-Mail. `@type - {string}` |
 
 **on:failure**
 
@@ -237,13 +365,13 @@ Login via an OAuth2 provider.
 
 ```svelte
 <script>
-  import { AuthOAuth2 } from "svelte-appwrite";
+  import { AuthOAuth2 } from "metawrite";
 </script>
 
 <AuthOAuth2
   provider="google"
-  success="http://localhost:5000?success"
-  failure="http://localhost:5000?failure"
+  success="http://localhost:3000?success"
+  failure="http://localhost:3000?failure"
   let:authorize>
   <button on:click={authorize}>Login Google</button>
 </AuthOAuth2>
@@ -252,9 +380,9 @@ Login via an OAuth2 provider.
 ### Properties
 | Name | Description |
 | --- | --- |
-| `provider` | OAuth2 provider |
-| `success` | Success url |
-| `failure` | Failure url |
+| `provider` | OAuth2 provider. `@type - {string}` |
+| `success` | Success url. `@type - {string}` |
+| `failure` | Failure url. `@type - {string}` |
 
 ### Directives
 
@@ -266,7 +394,7 @@ Requests current user to check if logged in.
 
 ```svelte
 <script>
-  import { User } from "svelte-appwrite";
+  import { User } from "metawrite";
 </script>
 
 <User let:user>
@@ -291,10 +419,10 @@ Get a list of all the documents from a collection.
 
 ```svelte
 <script>
-  import { Collection } from "svelte-appwrite";
+  import { Collection } from "metawrite";
 </script>
 
-<Collection collection="5f56a3035a01f" let:documents>
+<Collection collectionId="5f56a3035a01f" let:documents>
   You have {documents.length} documents.
 </Collection>
 ```
@@ -302,7 +430,7 @@ Get a list of all the documents from a collection.
 ### Properties
 | Name | Description |
 | --- | --- |
-| `collection` | Collection unique ID. |
+| `collectionId` | Collection unique ID. `@type - {string}` |
 | _additional_ | same as [here](https://appwrite.io/docs/client/database#listDocuments) |
 
 ### Directives
@@ -319,7 +447,7 @@ Object with function.
 | Name | Description |
 | --- | --- |
 | `reload()` | Re-fetch collection. |
-| `create(data, read, write)` | Create a new Document in the collection. `read`/`write` is optional and current user by default. |
+| `create(data, read, write)` | Create a new Document in the collection. `read`/`write` is optional and current user by default `@type - {string[]}`. `data` is `@type - {string}` |
 
 ## Get Document
 
@@ -327,10 +455,10 @@ Get a document. If you pass the `document` property with data from <Collection /
 
 ```svelte
 <script>
-  import { Document } from "svelte-appwrite";
+  import { Document } from "metawrite";
 </script>
 
-<Document id="5f56a3asda01f" let:document>
+<Document documentId="5f56a3asda01f" let:document>
   Title: {document.title}
   Text: {document.text}
 </Document>
@@ -338,9 +466,9 @@ Get a document. If you pass the `document` property with data from <Collection /
 ### Properties
 | Name | Description |
 | --- | --- |
-| `id` | Document unique ID |
-| `collection` | Collection unique ID |
-| or |
+| `documentId` | Document unique ID. `@type - {string}` |
+| `collectionId` | Collection unique ID. `@type - {string}` |
+| or ||
 | `document` | Document passed from `<Collection />` |
 
 ### Directives
@@ -356,7 +484,7 @@ Object with function.
 #### Arguments
 | Name | Description |
 | --- | --- |
-| `update(data)` | Update the document. |
+| `update(data)` | Update the document. `data` is `@type - {string}` |
 | `remove()` | Deletes the document. |
 | `reload()` | Re-fetch document. |
 
@@ -386,9 +514,9 @@ The Account components allow you to manage a user account.
 | `reload()` | Reload. |
 | `logout()` | Logout current session. |
 | `logoutAll()` | Logout from all session. |
-| `logoutFrom(session)` | Logout from specific session. |
+| `logoutFrom(session)` | Logout from specific session. `session` is `@type - {string}` |
 
-- **let:user** 
+- **let:user** `object`
 - **let:error**
 
 #### Events
@@ -402,6 +530,25 @@ The Account components allow you to manage a user account.
 - **on:successLogoutAll** On `logoutAll` success.
 - **on:failureLogoutAll** On `logoutAll` failure.
 
+#### Example
+
+```svelte
+<script>
+    import { User } from "metawrite"
+</script>
+
+<User let:actions let:user>
+    <button on:click={actions.reload()}>Reload user data</button>
+    <button on:click={actions.get()}>Get logged in user data</button>
+    <button on:click={actions.logout()}>Log out from current session</button>
+    <button on:click={actions.logoutFrom("sessionId")}>Log out from specific session</button>
+    <button on:click={actions.logoutAll()}>Log out from all sessions</button>
+
+    <!-- If logged in -->
+    <p>Hi, {user.name}</p>
+</User>
+```
+
 ### `<Create />`
 
 #### Directives
@@ -409,12 +556,38 @@ The Account components allow you to manage a user account.
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `create(email, password, name)` | Creates a user. |
+| `create(email, password, name)` | Creates a user. `email` and `password` are required - `@type - {string}`. `name` is *optional* - `@type - {string}` |
 
 #### Events
 
 - **on:success** On `create` success.
 - **on:failure** On `create` failure.
+
+#### Example
+
+```svelte
+<script>
+    import { Create } from "metawrite";
+
+    let name, email, password = "";
+
+    const success = e => {
+    // success callback
+    // `e` contains the user object
+  };
+
+  const failure = e => {
+    // failure callback
+  }
+</script>
+
+<Create let:actions on:success on:failure>
+    <input type="text" name="name" placeholder="name" bind:value={name} />
+    <input type="text" name="email" placeholder="email" bind:value={email} />
+    <input type="password" name="password" placeholder="password" bind:value={password} />
+    <button on:click={actions.create(name, email, password)}>Create Account</button>
+</Create>
+```
 
 ### `<Delete />`
 
@@ -430,6 +603,27 @@ The Account components allow you to manage a user account.
 - **on:success** On `delete` success.
 - **on:failure** On `delete` failure.
 
+#### Example
+
+```svelte
+<script>
+    import { Delete } from "metawrite";
+
+    const success = e => {
+    //success callback
+    // `e` contains the user object
+  };
+
+  const failure = e => {
+    //failure callback
+  }
+</script>
+
+<Delete let:actions on:success on:failure>
+    <button on:click={actions.delete}>Delete my account</button>
+</Delete>
+```
+
 ### `<Preferences />`
 
 #### Slots
@@ -443,7 +637,7 @@ The Account components allow you to manage a user account.
 | Name | Description |
 | --- | --- |
 | `reload()` | Reloads preferences. |
-| `update(prefs)` | Update preferences. |
+| `update(prefs)` | Update preferences. `prefs` - `@type - {object}` |
 
 #### Events
 
@@ -452,6 +646,26 @@ The Account components allow you to manage a user account.
 - **on:successUpdate** On `update` success.
 - **on:failureUpdate** On `update` failure.
 
+#### Example 
+
+```svelte
+<script>
+	import { Preferences } from 'metawrite';
+
+	let prefs = {
+		// You can pass only the specific settings you wish to update.
+	};
+</script>
+
+<Preferences let:actions>
+	<button
+		on:click={() => {
+			actions.update(prefs);
+			actions.reload();
+		}}>Update Preferences</button>
+</Preferences>
+```
+
 ### `<RecoverPassword />`
 
 #### Directives
@@ -459,8 +673,8 @@ The Account components allow you to manage a user account.
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `recover(email, url)` | Recover password. |
-| `complete(user, secret, password, passwordAgain)` | Complete password recovery. |
+| `recover(email, url)` | Recover password. `email` and `url` is required and `@type - {string}`. `url` is your page where you will handle `secret` with `complete` function. |
+| `complete(user, secret, password, passwordAgain)` | Complete password recovery. `user` and `secret` are set automatically by `metawrite`, so you don’t have to set them. `password` and `passwordAgain` are required - `@type - {string}`. |
 
 #### Events
 
@@ -469,6 +683,54 @@ The Account components allow you to manage a user account.
 - **on:successComplete** On `update` success.
 - **on:failureComplete** On `update` failure.
 
+#### Example
+
+```svelte
+<script>
+    import { RecoverPassword } from "metawrite";
+
+    const url = "http://localhost:3000/reset-password"; // URL that will point to the next step.
+    let email = '';
+
+    const successRecover = e => {
+    //success callback
+    // `e` contains the user object
+  };
+
+  const failureRecover = e => {
+    //failure callback
+  }
+</script>
+
+<!-- localhost/forgot-password -->
+<RecoverPassword let:actions on:successRecover on:failureRecover>
+    <input name="email" type="text" bind:value={email, url} placeholder="Email" />
+    <button on:click{actions.recover(email)}>Recover Password</button>
+</RecoverPassword>
+
+<!-- Then on localhost/reset-password  -->
+<script>
+    import { RecoverPassword } from "metawrite";
+
+    let password, passwordAgain = '';
+
+    const successComplete = e => {
+    //success callback
+    // `e` contains the user object
+  };
+
+  const failureComplete = e => {
+    //failure callback
+  }
+</script>
+
+<RecoverPassword let:actions on:successComplete on:failureComplete>
+    <input type="password" name="password" bind:value{password} placeholder="Password" />
+    <input type="password" name="password" bind:value{passwordAgain} placeholder="Confirm Password" />
+    <button on:click{actions.complete(password, passwordAgain)}>Set New Password</button>
+</RecoverPassword>
+```
+
 ### `<Update />`
 
 #### Directives
@@ -476,9 +738,9 @@ The Account components allow you to manage a user account.
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `name(name)` | Update name. |
-| `email(email, password)` | Update email. |
-| `password(password, oldPassword)` | Update password. |
+| `name(name)` | Update name. All fields are required. `@type - {string}` |
+| `email(email, password)` | Update email. All fields are required. `@type - {string}` |
+| `password(password, oldPassword)` | Update password. All fields are required. `@type - {string}` |
 
 #### Events
 
@@ -489,6 +751,22 @@ The Account components allow you to manage a user account.
 - **on:successPassword** On `password` success.
 - **on:failurePassword** On `password` failure.
 
+#### Example 
+
+```svelte
+<script>
+    import { Update } from "metawrite"
+
+    let name, email, password, newPassword, oldPassword = ""
+</script>
+
+<Update let:actions>
+    <button on:click={actions.name(name)}>This updates name</button>
+    <button on:click={actions.email(email, password)}>This updates email</button>
+    <button on:click={actions.password(newPassword, oldPassword)}>This updates password</button>
+</Update>
+```
+
 ### `<Verification />`
 
 #### Directives
@@ -496,8 +774,8 @@ The Account components allow you to manage a user account.
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `create(url)` | Create Verification. |
-| `complete(user, secret)` | Complete Verification. |
+| `create(url)` | Create Verification. `url` is what URL used to create verification link sent to your email inbox. `@type - {string}` |
+| `update(user, secret)` | Complete Verification. `user` and `secret` are set automatically by `metawrite`. |
 
 #### Events
 
@@ -505,6 +783,21 @@ The Account components allow you to manage a user account.
 - **on:failureCreate** On `create` failure.
 - **on:successComplete** On `complete` success.
 - **on:failureComplete** On `complete` failure.
+
+#### Example
+
+```svelte
+<script>
+    import { Verification } from "metawrite"
+
+    const url = window.location.href;
+</script>
+
+<Verification let:actions>
+    <button on:click={actions.create(url)}></button>
+    <button on:click={actions.update()}>Update email verification status</button>
+</Verification>
+```
 
 ## Auth
 The Auth components allow you to authenticate a user account.
@@ -528,17 +821,129 @@ The Auth components allow you to authenticate a user account.
 - **on:success** On `authorize` success.
 - **on:failure** On `authorize` failure.
 
+#### Example
+
+```svelte
+<script>
+    import { AuthEmail } from "metawrite";
+  
+    let email = "";
+    let password = "";
+  
+    const success = e => {
+      //success callback
+      // `e` contains the user object
+    };
+  
+    const failure = e => {
+      //failure callback
+    }
+  </script>
+  
+  <AuthEmail let:authorize on:success on:failure>
+    <input type="text" bind:value={email}>
+    <input type="text" bind:value={password}>
+    <button on:click={authorize(email,password)}>Login</button>
+  </AuthEmail>
+```
+
 ### `<AuthOAuth2 />`
 
 #### Properties
 | Name | Description |
 | --- | --- |
-| `provider` | OAuth2 provider |
-| `success` | Success url |
-| `failure` | Failure url |
-#### Directives
+| `provider` | OAuth2 provider. `@type - {string}` |
+| `success` | Success url. `@type - {string}` |
+| `failure` | Failure url. `@type - {string}` |
+|#### Directives||
 
 **let:authorize()**
+
+#### Example 
+
+```svelte
+<script>
+    import { AuthOAuth2 } from "metawrite";
+  </script>
+  
+  <AuthOAuth2
+    provider="google"
+    success="http://localhost:3000?success"
+    failure="http://localhost:3000?failure"
+    let:authorize>
+    <button on:click={authorize}>Login Google</button>
+  </AuthOAuth2>
+```
+
+### `<CreateAnonymousSession />`
+
+#### Directives
+
+**let:actions**
+
+| Name                        | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `create()` | Creates anonymous session. |
+
+#### Example
+
+```svelte
+<script>
+    import { CreateAnonymousSession } from "metawrite";
+</script>
+
+<CreateAnonymousSession let:actions>
+    <button on:click={actions.create}>Create Anonymous Session</button>
+</CreateAnonymousSession>
+```
+
+### `<CreateJWT />`
+
+#### Directives
+
+**let:actions**
+
+| Name                        | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `create()` | Creates JWT token. |
+
+#### Example
+
+```svelte
+<script>
+    import { CreateJWT } from "metawrite";
+</script>
+
+<CreateJWT let:actions>
+    <button on:click={actions.create}>Create JWT token</button>
+</CreateJWT>
+```
+
+### `<MagicURL />`
+
+#### Directives
+
+**let:actions**
+
+| Name                        | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `create()` | Creates Magic URL Session. |
+
+#### Example 
+
+```svelte
+<script>
+    import { MagicURL } from "metawrite";
+
+    const userId = "32h2hj24h2"
+    const email = "user@example.com"
+    const url = "http://example.com" // optional
+</script>
+
+<MagicURL let:actions>
+    <button on:click={actions.create(userId, email, url)}>Create MagicURL</button>
+</MagicURL>
+```
 
 ## Avatars
 The Avatar components aim to help you complete everyday tasks related to your app image, icons, and avatars.
@@ -547,75 +952,155 @@ The Avatar components aim to help you complete everyday tasks related to your ap
 
 #### Arguments
 
-- code
-- width
-- height
-- quality
+- code - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {string}`
+- quality - *optional* `@type - {string}`
 
 #### Directives
 
-- **let:src** Image link
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+    import { Browser } from "metawrite"
+</script>
+
+<Browser code="firefox" let:src>
+    <img src={String(src)} alt="Browser" />
+</Browser>
+```
 
 ### `<CreditCard />`
 
 #### Arguments
 
-- code
-- width
-- height
-- quality
+- code - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {string}`
+- quality - *optional* `@type - {string}`
 
 #### Directives
 
-- **let:src** Image link
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+    import { CreditCard } from "metawrite"
+</script>
+
+<CreditCard code="amex" let:src>
+    <img src={String(src)} alt="card" />
+</CreditCard>
+```
 
 ### `<Favicon />`
 
 #### Arguments
 
-- url
+- url - *required* `@type - {string}`
 
 #### Directives
 
-- **let:src** Image link
+- **let:src** Image link `@type - {URL}`
+
+```svelte
+<script>
+    import { Favicon } from "metawrite"
+    const url = window.location.href;
+</script>
+
+<Favicon {url} let:src>
+    <img src={String(src)} alt="favicon" />
+</Favicon>
+```
 
 ### `<Flag />`
 
 #### Arguments
 
-- code
-- width
-- height
-- quality
+- code - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {string}`
+- quality - *optional* `@type - {string}`
 
 #### Directives
 
-- **let:src** Image link
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+    import { Flag } from "metawrite"
+</script>
+
+<Flag code="canada" let:src>
+    <img src={String(src)} alt="flag" />
+</Flag>
+```
 
 ### `<Image />`
 
 #### Arguments
 
-- url
-- width
-- height
+- url - *required* `@type - {string}`
+- width - *optional* `@type - {number}`
+- height - *optional* `@type - {number}`
 
 #### Directives
 
-- **let:src** Image link
+- **let:src** Image link `@type - {URL}`
+
+#### Example
+
+```svelte
+<script>
+    import { Image } from "metawrite";
+
+    let url = "https://increas.io/";
+    let width, height = 100;
+</script>
+
+<Image {url} {width} {height} let:src>
+    <img src={String(src)} alt="someImage" />
+</Image>
+```
 
 ### `<QR />`
 
 #### Arguments
 
-- text
-- size
-- margin
-- download
+- text - *required* `@type - {string}`
+- size - *optional* `@type - {optional}`
+- margin - *optional* `@type - {number}`
+- download - *optional* `@type - {boolean}`
 
 #### Directives
 
-- **let:src** Image link
+- **let:src** Image link `@type - {URL}`
+
+#### Example 
+
+```svelte
+<script>
+	import { QR } from 'metawrite';
+
+	let text = 'https://increas.io/'; // could be any text
+	let size = 500;
+	let margin = 1;
+	let download = false;
+</script>
+
+<QR {text} {size} {margin} {download} let:src>
+	<img src={String(src)} alt="QR Code" />
+</QR>
+
+```
 
 ## Database
 The Database components allow you to create structured collections of documents, query and filter lists of documents, and manage an advanced set of read and write access permissions.
@@ -624,16 +1109,25 @@ The Database components allow you to create structured collections of documents,
 
 #### Arguments
 
-- collectionId
-- filters
-- offset
-- limit
-- orderField
-- orderType
-- orderCast
-- search
-- first
-- last
+- collectionId - *required* `@type - {string}`
+
+- Cache - *optional*, by default set to false `@type - {boolean}`
+
+  **query: `@type - {object}`**
+
+- filters - *optional* `@type - {string[]}`
+
+- offset - *optional* `@type - {number}`
+
+- limit - *optional* `@type - {number}`
+
+- orderField - *optional* `@type - {string}`
+
+- orderType - *optional* `@type - {string}`
+
+- orderCast - *optional* `@type - {string[]}`
+
+- search - *optional* `@type - {string[]}`
 
 #### Slots
 
@@ -646,18 +1140,30 @@ The Database components allow you to create structured collections of documents,
 | Name | Description |
 | --- | --- |
 | `reload()` | Reload. |
-| `create(data, read, write)` | Creates a Document. |
+| `create(data, read, write)` | Creates a Document. `data` - `@type - {string}`.<br /> `read`/`write` is optional `@type - {string[]}` |
 
 - **let:documents**
 - **let:error**
+
+#### Example 
+
+```svelte
+<script>
+  import { Collection } from "metawrite";
+</script>
+
+<Collection collectionId="5f56a3035a01f" let:documents>
+  You have {documents.length} documents.
+</Collection>
+```
 
 ### `<Document />`
 
 #### Arguments
 
-- documentId
-- collectionId
-- document
+- documentId - *required* `@type - {string}`
+- collectionId - *required* `@type - {string}`
+- document - `Promise<any>`
 
 #### Slots
 
@@ -670,11 +1176,31 @@ The Database components allow you to create structured collections of documents,
 | Name | Description |
 | --- | --- |
 | `reload()` | Reload. |
-| `update(data)` | Updates a Document. |
+| `update(data)` | Updates a Document. `data` - `@type - {object}` |
 | `remove()` | Removes a Document. |
 
 - **let:document**
 - **let:error**
+
+#### Example
+
+```svelte
+<script>
+	import { Collection, Document } from '$lib';
+
+	const collectionId = '5f56a3035a01f';
+</script>
+
+<Collection {collectionId} let:documents>
+	You have {documents.length} documents:
+	{#each documents as document}
+		<Document {collectionId} documentId={document.$id} {document}>
+			Title: {document.title}
+			Text: {document.text}
+		</Document>
+	{/each}
+</Collection>
+```
 
 ## Storage
 The Storage components allow you to manage your project files. You can upload, view, download, and query all your project files.
@@ -686,18 +1212,38 @@ The Storage components allow you to manage your project files. You can upload, v
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `create(file, read, write)` | Uploads a file. |
+| `create(fileId, file, read, write)` | Uploads a file. <br />`fileId` is required `@type - {string}`, `"unique()"` will generate random unique id, but you can use custom.<br />`file` is `@type - {File}` and required.<br />`read`/`write` is `@type - {string[]}` and *optional* |
 
 - **let:files**
+
+#### Example
+
+```svelte
+<script>
+    import { Storage } from "metawrite"
+
+    // Required
+    /**@type {File}*/ let file;
+    /**@type {string}*/ let fileId = "unique()"; // this will generate random unique id, but you can use custom
+
+    // Optional
+    /**@type {string[]}*/ let read;
+    /**@type {string[]}*/ let write;
+</script>
+
+<Storage {file} let:actions>
+    <button on:click={actions.create(fileId, file, read, write)}>Upload File</button>
+</Storage>
+```
 
 ### `<FileList />`
 
 #### Arguments
 
-- search
-- limit
-- offset
-- orderType
+- search - *optional* `@type - {string}`
+- limit - *optional* `@type - {number}`
+- offset - *optional* `@type - {number}`
+- orderType - *optional* `@type - {string} ` => write  `"ASC"` or `"DESC"`
 
 #### Slots
 
@@ -714,11 +1260,32 @@ The Storage components allow you to manage your project files. You can upload, v
 - **let:files**
 - **let:error**
 
+#### Example 
+
+```svelte
+<script>
+    import { FileList } from "metawrite"
+
+    // Optional
+    let search = '';
+    let limit = 10;
+    let offset = 0;
+    let orderType = 'ASC';
+</script>
+
+<FileList {search} {limit} {offset} {orderType}let:actions let:files>
+    {#each files as file}
+        <p>File: {file.name}</p>
+    {/each}
+    <button on:click={actions.reload()}>Reload</button>
+</FileList>
+```
+
 ### `<File />`
 
 #### Arguments
 
-- file
+- file - it is fileId `@type - {string}`
 
 #### Directives
 
@@ -730,6 +1297,85 @@ The Storage components allow you to manage your project files. You can upload, v
 | `preview(width, height, quality, background, output)` | Get file for preview. |
 | `update(read, write)` | Updates a file. |
 | `delete()` | Deletes a file. |
+
+#### Example 
+
+```svelte
+<script>
+	import { File } from 'metawrite';
+
+	// Required
+	/**@type {File}*/ let file;
+
+	// OPTIONAL
+	/** @type {number} */ let width;
+	/** @type {number} */ let height;
+	/** @type {string} */ let gravity;
+	/** @type {number} */ let quality;
+	/** @type {number} */ let borderWidth;
+	/** @type {string} */ let borderColor;
+	/** @type {number} */ let borderRadius;
+	/** @type {number} */ let opacity;
+	/** @type {number} */ let rotation;
+	/** @type {string} */ let background;
+	/** @type {string} */ let output;
+	/** @type {string[]} */ let read;
+	/** @type {string[]} */ let write;
+</script>
+
+<File {file} let:actions>
+	<button on:click={actions.download()}>Download File</button>
+	<button on:click={actions.view()}>File View</button>
+	<button on:click={actions.preview()}>Preview File</button>
+	<button on:click={actions.update(read, write)}>Update File</button>
+	<button on:click={actions.delete()}>Delete File</button>
+</File>
+```
+
+## Functions
+The Functions service allows you to create custom behaviour that can be triggered by any supported Appwrite system events or by a predefined schedule.
+
+Appwrite Cloud Functions lets you automatically run backend code in response to events triggered by Appwrite or by setting it to be executed in a predefined schedule. Your code is stored in a secure way on your Appwrite instance and is executed in an isolated environment.
+
+You can learn more by following Appwrite's [Cloud Functions tutorial](https://appwrite.io/docs/functions).
+
+### `<Function />`
+
+#### Directioves
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+| `create(functionId, data)` | Creates Execution. `functionId` is *required*, `data` could be empty string because *optional*. `@type {string}`|
+| `create(functionId, executionId)` | Get Execution. Both parameters are required. `@type {string}` |
+
+- **let:executions**
+
+#### Slots
+
+- **error**
+
+#### Example 
+
+```svelte
+<script>
+	import { Function } from '$lib';
+	let functionId = 'someExecution'; // required
+	let newFunctionId = '';
+	let data = 'String of custom data to send to function.'; // could be empty string because optional
+</script>
+
+<Function {functionId} {data} let:actions let:executions>
+	{#each executions as execution}
+		<p>
+			Execution ID: {execution.$id}, Function ID: {execution.functionId}, Date Created: {execution.dateCreated}
+		</p>
+	{/each}
+	<input type="text" name="functionId" placeholder="Function ID" bind:value={newFunctionId} />
+	<button on:click={actions.create(newFunctionId, data)}>Create Execution</button>
+</Function>
+```
 
 ## Locale
 The Locale components allow you to customize your app based on your users' location.
@@ -749,6 +1395,22 @@ The Locale components allow you to customize your app based on your users' locat
 
 - **loading**
 - **error**
+
+#### Example 
+
+```svelte
+<script>
+    import { Continents } from "metawrite"
+</script>
+
+<Continents let:actions let:continents>
+    <button on:click={actions.reload()}>Reload</button>
+    <p>There are {continents.sum} continents:</p>
+    {#each continents.continents as continent}
+        <p>{continent.name}, {continent.code}</p>
+    {/each}
+</Continents>
+```
 
 ### `<Countries />`
 
@@ -770,6 +1432,32 @@ The Locale components allow you to customize your app based on your users' locat
 
 - **let:countries**
 
+#### Example 
+
+```svelte
+<script>
+    import { Countries } from "metawrite"
+
+    let eu = true; // if you want to list only EU countries
+</script>
+
+<Countries let:actions let:countries>
+    <button on:click={actions.reload()}>Reload</button>
+    <p>There are {countries.sum} countries in the world:</p>
+    {#each countries.countries as country}
+        <p>{country.name}, {country.code}</p>
+    {/each}
+</Countries>
+
+<Countries {eu} let:actions let:countries>
+    <button on:click={actions.reload()}>Reload</button>
+    <p>There are {countries.sum} countries in EU:</p>
+    {#each countries.countries as country}
+        <p>{country.name}, {country.code}</p>
+    {/each}
+</Countries>
+```
+
 ### `<Currencies />`
 
 #### Slots
@@ -786,6 +1474,54 @@ The Locale components allow you to customize your app based on your users' locat
 
 - **let:currencies**
 
+#### Example 
+
+```svelte
+<script>
+    import { Currencies } from "metawrite"
+</script>
+
+<Currencies let:actions let:currencies>
+    <button on:click={actions.reload()}>Reload</button>
+    <p>There are {currencies.sum} currencies:</p>
+    {#each currencies.currencies as currency}
+        <p>{currency.symbol} - {currency.name} ({currency.code})</p>
+    {/each}
+</Currencies>
+```
+
+### `<Languages />`
+
+#### Slots
+
+- **loading**
+- **error**
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `reload()` | Reload. |
+
+- **let:languages**
+
+#### Example 
+
+```svelte
+<script>
+	import { Languages } from 'metawrite';
+</script>
+
+<Languages let:actions let:languages>
+	<button on:click={actions.reload()}>Reload</button>
+	<p>There are {languages.sum} languages:</p>
+	{#each languages.languages as language}
+		<p>{language.name}, {language.code}></p>
+    {/each}
+</Languages>
+```
+
 ### `<Locale />`
 
 #### Slots
@@ -800,7 +1536,22 @@ The Locale components allow you to customize your app based on your users' locat
 | --- | --- |
 | `reload()` | Reload. |
 
-- **let:code**
+- **let:code** `object`
+
+#### Example 
+
+```svelte
+<script>
+	import { Locale } from 'metawrite';
+</script>
+
+<Locale let:actions let:code>
+	<h1>Active Session</h1>
+	<button on:click={actions.reload()}>Reload</button>
+	<p>Location: {code.country}, {code.continentCode}</p>
+	<p>IP: {code.ip}</p>
+</Locale>
+```
 
 ### `<PhoneCodes />`
 
@@ -818,3 +1569,18 @@ The Locale components allow you to customize your app based on your users' locat
 
 - **let:codes**
 
+#### Example 
+
+```svelte
+<script>
+	import { PhoneCodes } from 'metawrite';
+</script>
+
+<PhoneCodes let:actions let:codes>
+	<button on:click={actions.reload()}>Reload</button>
+	<p>There are {codes.sum} phone codes:</p>
+	{#each codes.phones as phone}
+		<p>{phone.code} - {phone.countyName}></p>
+	{/each}
+</PhoneCodes>
+```

@@ -26,7 +26,7 @@
 
 <!--
 @component
-Creates a new user account and stores data in a cookie.
+Creates a new user account.
 -->
 
 {#if $active}

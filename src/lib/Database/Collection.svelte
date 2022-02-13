@@ -55,9 +55,9 @@
 			getDocuments = fetchDocuments();
 		},
 		create: async (
-			data = '',
-			read = [`user:${$currentUser.$id}`],
-			write = [`user:${$currentUser.$id}`]
+			/**@type {string}*/ data = '',
+			/**@type {string[]}*/ read = [`user:${$currentUser.$id}`],
+			/**@type {string[]}*/ write = [`user:${$currentUser.$id}`]
 		) => {
 			const response = await Appwrite.sdk.database.createDocument(collectionId, data, read, write);
 			actions.reload();

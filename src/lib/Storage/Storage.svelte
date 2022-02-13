@@ -11,11 +11,14 @@
   import { createEventDispatcher } from "svelte";
   import { currentUser } from "../stores";
 
+  /**@type {File}*/ export let file;
+  /**@type {string}*/ export let fileId;
+
   const dispatch = createEventDispatcher();
 
   const actions = {
     create: async (
-      fileId = "unique()",
+      /** @type {string} */ fileId,
       /** @type {File} */ file,
       read = [`user:${$currentUser.$id}`],
       write = [`user:${$currentUser.$id}`]
