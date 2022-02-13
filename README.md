@@ -10,6 +10,10 @@
   <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" />
 </a>
 
+[![npm Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml)
+
+[![Github Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml)
+
 # Support Us 
 
 Get free $100 credits on DigitalOcean:
