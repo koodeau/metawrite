@@ -6,8 +6,15 @@
 	 * @slot {{ error: object }} error
 	 */
 	import { createEventDispatcher } from 'svelte';
-	import { SDK as Appwrite } from '../appwrite';
 	import { currentUser } from '../stores';
+	import { Appwrite as SDK } from 'appwrite';
+
+	export const Appwrite = {
+		sdk: new SDK(),
+		setConfig: (/** @type {{ endpoint: string; project: string; locale?: string; }} */ config) => {
+			Appwrite.sdk.setEndpoint(config.endpoint).setProject(config.project).setLocale(config.locale);
+		}
+	};
 
 	const dispatch = createEventDispatcher();
 	const authorize = (/** @type {string} */ email, /** @type {string} */ password) => {

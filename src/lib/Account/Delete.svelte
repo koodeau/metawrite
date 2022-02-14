@@ -8,7 +8,15 @@
 	 */
 	import { createEventDispatcher } from 'svelte';
 	import { active } from '../stores';
-	import { SDK as Appwrite } from '../appwrite';
+
+	import { Appwrite as SDK } from 'appwrite';
+
+	export const Appwrite = {
+		sdk: new SDK(),
+		setConfig: (/** @type {{ endpoint: string; project: string; locale?: string; }} */ config) => {
+			Appwrite.sdk.setEndpoint(config.endpoint).setProject(config.project).setLocale(config.locale);
+		}
+	};
 
 	const dispatch = createEventDispatcher();
 	const actions = {

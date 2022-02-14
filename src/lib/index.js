@@ -1,5 +1,4 @@
 export { default as Appwrite } from './Init.svelte';
-export { SDK } from './appwrite';
 
 export { default as Create } from './Account/Create.svelte';
 export { default as Delete } from './Account/Delete.svelte';

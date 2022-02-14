@@ -9,7 +9,14 @@
 	 * }}}
 	 * @slot {{ error: object }} error
 	 */
-	import { SDK as Appwrite } from '../appwrite';
+	import { Appwrite as SDK } from 'appwrite';
+
+	export const Appwrite = {
+		sdk: new SDK(),
+		setConfig: (/** @type {{ endpoint: string; project: string; locale?: string; }} */ config) => {
+			Appwrite.sdk.setEndpoint(config.endpoint).setProject(config.project).setLocale(config.locale);
+		}
+	};
 
 	export let functionId = '';
 	export let data = '';

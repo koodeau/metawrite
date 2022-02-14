@@ -11,8 +11,15 @@
 	 */
 	import { setContext } from 'svelte';
 	import { cacheKey } from '../keys';
-	import { SDK as Appwrite } from '../appwrite';
 	import { currentUser, documents } from '../stores';
+	import { Appwrite as SDK } from 'appwrite';
+
+	export const Appwrite = {
+		sdk: new SDK(),
+		setConfig: (/** @type {{ endpoint: string; project: string; locale?: string; }} */ config) => {
+			Appwrite.sdk.setEndpoint(config.endpoint).setProject(config.project).setLocale(config.locale);
+		}
+	};
 
 	/**
 	 * @name Collection ID
