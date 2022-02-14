@@ -1,5 +1,4 @@
 export { default as Appwrite } from "./Init";
-export { SDK } from "./appwrite.js";
 export { default as Create } from "./Account/Create";
 export { default as Delete } from "./Account/Delete";
 export { default as CreateAnonymousSession } from "./Account/CreateAnonymousSession";
