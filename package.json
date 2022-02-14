@@ -43,7 +43,9 @@
     "prettier": "prettier --write --plugin-search-dir= ./src/lib/**/*.{js,svelte} && prettier --write --plugin-search-dir= ./src/lib/*.{js,svelte}",
     "svelte-check": "svelte-check",
     "version": "auto-changelog -p --hide-credit --template changelog.hbs && git add CHANGELOG.md",
-    "test": "svelte-check --workspace src/lib"
+    "test": "svelte-check --workspace src/lib",
+    "release:beta": "npm run package && cd package && npm publish --tag beta",
+    "release": "npm run package && cd package && npm publish"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
@@ -63,9 +65,17 @@
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"
   },
+  "files": [
+    "**/*.svelte",
+    "**/*.js",
+    "**/*.d.ts",
+    "*.svelte",
+    "*.js",
+    "*.d.ts"
+  ],
   "type": "module",
-  "main": "./package/index.js",
-  "types": "./types/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "dependencies": {
     "appwrite": "^6.0.1"
   }

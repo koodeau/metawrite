@@ -14,7 +14,7 @@ const config = {
 		adapter: adapter(),
 		package: {
 			dir: 'package',
-			emitTypes: false
+			emitTypes: true
 		}
 	}
 };
