@@ -10,7 +10,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.10](https://github.com/koodeau/metawrite/compare/v0.1.9...v0.1.10)
+
+- Fix: added types to components and resolved warnings [`4840c54`](https://github.com/koodeau/metawrite/commit/4840c543039e888a3198d042c0370211205471f2)
+
+#### [v0.1.9](https://github.com/koodeau/metawrite/compare/v0.1.8...v0.1.9)
+
+> 14 February 2022
+
+- experimentsl fixes for Appwrite [`207e179`](https://github.com/koodeau/metawrite/commit/207e179f98d3374ced550198936711a37222f5ed)
+
 #### [v0.1.8](https://github.com/koodeau/metawrite/compare/v0.1.7...v0.1.8)
+
+> 14 February 2022
 
 - Fix: revert d.ts and improved package.json [`0d4d0b2`](https://github.com/koodeau/metawrite/commit/0d4d0b28b23df28f13eaca8efb8252288d609c25)
 - improved workflow [`b68f194`](https://github.com/koodeau/metawrite/commit/b68f194f92001fb5460e459db3d0adb7bbabe67c)
@@ -65,13 +77,29 @@ All notable changes to this project will be documented in this file. Dates are d
 - Breaking Change: fixed package entry exports. Bug Fix [`2dc563f`](https://github.com/koodeau/metawrite/commit/2dc563fe01bfa947aca3e5cfcd6c5a537570f3c0)
 - modified workflows [`4fd7dc7`](https://github.com/koodeau/metawrite/commit/4fd7dc7149b9b57a55d89410b5b1f66cb9ba160c)
 
-#### [v0.0.4](https://github.com/koodeau/metawrite/compare/v0.0.0...v0.0.4)
+#### [v0.0.4](https://github.com/koodeau/metawrite/compare/v0.0.3...v0.0.4)
+
+> 13 February 2022
+
+#### [v0.0.3](https://github.com/koodeau/metawrite/compare/v0.0.2...v0.0.3)
 
 > 13 February 2022
 
 - added templates and workflows [`636797a`](https://github.com/koodeau/metawrite/commit/636797a9c25f9f4ad8658652030f87ef7da69f63)
+
+#### [v0.0.2](https://github.com/koodeau/metawrite/compare/v0.0.1...v0.0.2)
+
+> 13 February 2022
+
 - added badges [`0da0ee4`](https://github.com/koodeau/metawrite/commit/0da0ee47f088252318e5d3bea95e26d2fc5e8f73)
 - fixes for readme [`7d71a9a`](https://github.com/koodeau/metawrite/commit/7d71a9a06898e0f5730879cead149ff61edcad81)
+- fixes for readme [`7508252`](https://github.com/koodeau/metawrite/commit/75082528db8f1914e53b29cecc3f7f527eeb1381)
+
+#### [v0.0.1](https://github.com/koodeau/metawrite/compare/v0.0.0...v0.0.1)
+
+> 13 February 2022
+
+- corrected tests [`8f4bf3a`](https://github.com/koodeau/metawrite/commit/8f4bf3a92e39910d6c01c09d988a7b01e65135d7)
 
 #### v0.0.0
 
