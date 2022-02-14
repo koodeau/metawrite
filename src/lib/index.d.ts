@@ -1,30 +1,74 @@
-export { default as Appwrite } from "./Init";
-export { default as SDK } from "./appwrite";
-export { default as Create } from "./Account/Create";
-export { default as Delete } from "./Account/Delete";
-export { default as CreateAnonymousSession } from "./Account/CreateAnonymousSession";
-export { default as CreateJWT } from "./Account/CreateJWT";
-export { default as MagicURL } from "./Account/MagicURL";
-export { default as Preferences } from "./Account/Preferences";
-export { default as RecoverPassword } from "./Account/RecoverPassword";
-export { default as Update } from "./Account/Update";
-export { default as User } from "./Account/User";
-export { default as Verification } from "./Account/Verification";
-export { default as AuthEmail } from "./Auth/Email";
-export { default as AuthOAuth2 } from "./Auth/OAuth2";
-export { default as Collection } from "./Database/Collection";
-export { default as Document } from "./Database/Document";
-export { default as FileList } from "./Storage/FileList";
-export { default as Locale } from "./Locale/Locale";
-export { default as Countries } from "./Locale/Countries";
-export { default as Continents } from "./Locale/Continents";
-export { default as Languages } from "./Locale/Languages";
-export { default as Currencies } from "./Locale/Currencies";
-export { default as PhoneCodes } from "./Locale/PhoneCodes";
-export { default as Flag } from "./Avatars/Flag";
-export { default as Browser } from "./Avatars/Browser";
-export { default as CreditCard } from "./Avatars/CreditCard";
-export { default as Favicon } from "./Avatars/Favicon";
-export { default as Image } from "./Avatars/Image";
-export { default as QR } from "./Avatars/QR";
-export { default as Function } from "./Functions/Function";
+import Appwrite from './Init';
+import SDK from './appwrite';
+
+import Create from './Account/Create';
+import Delete from './Account/Delete';
+import CreateAnonymousSession from './Account/CreateAnonymousSession';
+import CreateJWT from './Account/CreateJWT';
+import MagicURL from './Account/MagicURL';
+import Preferences from './Account/Preferences';
+import RecoverPassword from './Account/RecoverPassword';
+import Update from './Account/Update';
+import User from './Account/User';
+import Verification from './Account/Verification';
+
+import AuthEmail from './Auth/Email';
+import AuthOAuth2 from './Auth/OAuth2';
+
+import Collection from './Database/Collection';
+import Document from './Database/Document';
+
+import File from './Storage/File';
+import FileList from './Storage/FileList';
+import Storage from './Storage/Storage';
+
+import Locale from './Locale/Locale';
+import Countries from './Locale/Countries';
+import Continents from './Locale/Continents';
+import Languages from './Locale/Languages';
+import Currencies from './Locale/Currencies';
+import PhoneCodes from './Locale/PhoneCodes';
+
+import Flag from './Avatars/Flag';
+import Browser from './Avatars/Browser';
+import CreditCard from './Avatars/CreditCard';
+import Favicon from './Avatars/Favicon';
+import Image from './Avatars/Image';
+import QR from './Avatars/QR';
+
+import Function from './Functions/Function';
+
+export {
+    Appwrite,
+    SDK,
+    Create,
+    Delete,
+    CreateAnonymousSession,
+    CreateJWT,
+    MagicURL,
+    Preferences,
+    RecoverPassword,
+    Update,
+    User,
+    Verification,
+    AuthEmail,
+    AuthOAuth2,
+    Collection,
+    Document,
+    File,
+    FileList,
+    Storage,
+    Locale,
+    Countries,
+    Continents,
+    Languages,
+    Currencies,
+    PhoneCodes,
+    Flag,
+    Browser,
+    CreditCard,
+    Favicon,
+    Image,
+    QR,
+    Function
+};

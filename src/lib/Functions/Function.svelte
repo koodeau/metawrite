@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @slot {{
 	 * executions: any;
@@ -11,8 +11,7 @@
 	 */
 	import { SDK as Appwrite } from '../appwrite';
 
-	export let functionId = '';
-	export let data = '';
+	export let functionId: string;
 	export let limit = 25;
 	export let offset = 0;
 	export let cursor = '';
@@ -24,12 +23,12 @@
 	const actions = {
 		// @ts-ignore
 		reload: () => (documents = fetchExecutions()),
-		create: async (/** @type {string} */ functionId, /** @type {string} */ data) => {
+		create: async (functionId: string, data?: string) => {
 			const response = await Appwrite.sdk.functions.createExecution(functionId, data);
 			actions.reload();
 			return response;
 		},
-		get: async (/** @type {string} */ functionId, /** @type {string} */ executionId) => {
+		get: async (functionId: string, executionId: string) => {
 			return await Appwrite.sdk.functions.getExecution(functionId, executionId);
 		}
 	};

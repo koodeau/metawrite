@@ -1,39 +1,74 @@
-export { default as Appwrite } from './Init.svelte';
-export { SDK } from './appwrite';
+import Appwrite from './Init.svelte';
+import { SDK } from './appwrite';
 
-export { default as Create } from './Account/Create.svelte';
-export { default as Delete } from './Account/Delete.svelte';
-export { default as CreateAnonymousSession } from './Account/CreateAnonymousSession.svelte';
-export { default as CreateJWT } from './Account/CreateJWT.svelte';
-export { default as MagicURL } from './Account/MagicURL.svelte';
-export { default as Preferences } from './Account/Preferences.svelte';
-export { default as RecoverPassword } from './Account/RecoverPassword.svelte';
-export { default as Update } from './Account/Update.svelte';
-export { default as User } from './Account/User.svelte';
-export { default as Verification } from './Account/Verification.svelte';
+import Create from './Account/Create.svelte';
+import Delete from './Account/Delete.svelte';
+import CreateAnonymousSession from './Account/CreateAnonymousSession.svelte';
+import CreateJWT from './Account/CreateJWT.svelte';
+import MagicURL from './Account/MagicURL.svelte';
+import Preferences from './Account/Preferences.svelte';
+import RecoverPassword from './Account/RecoverPassword.svelte';
+import Update from './Account/Update.svelte';
+import User from './Account/User.svelte';
+import Verification from './Account/Verification.svelte';
 
-export { default as AuthEmail } from './Auth/Email.svelte';
-export { default as AuthOAuth2 } from './Auth/OAuth2.svelte';
+import AuthEmail from './Auth/Email.svelte';
+import AuthOAuth2 from './Auth/OAuth2.svelte';
 
-export { default as Collection } from './Database/Collection.svelte';
-export { default as Document } from './Database/Document.svelte';
+import Collection from './Database/Collection.svelte';
+import Document from './Database/Document.svelte';
 
-export { default as File } from './Storage/File.svelte';
-export { default as FileList } from './Storage/FileList.svelte';
-export { default as Storage } from './Storage/Storage.svelte';
+import * as File from './Storage/File.svelte';
+import FileList from './Storage/FileList.svelte';
+import Storage from './Storage/Storage.svelte';
 
-export { default as Locale } from './Locale/Locale.svelte';
-export { default as Countries } from './Locale/Countries.svelte';
-export { default as Continents } from './Locale/Continents.svelte';
-export { default as Languages } from './Locale/Languages.svelte';
-export { default as Currencies } from './Locale/Currencies.svelte';
-export { default as PhoneCodes } from './Locale/PhoneCodes.svelte';
+import Locale from './Locale/Locale.svelte';
+import Countries from './Locale/Countries.svelte';
+import Continents from './Locale/Continents.svelte';
+import Languages from './Locale/Languages.svelte';
+import Currencies from './Locale/Currencies.svelte';
+import PhoneCodes from './Locale/PhoneCodes.svelte';
 
-export { default as Flag } from './Avatars/Flag.svelte';
-export { default as Browser } from './Avatars/Browser.svelte';
-export { default as CreditCard } from './Avatars/CreditCard.svelte';
-export { default as Favicon } from './Avatars/Favicon.svelte';
-export { default as Image } from './Avatars/Image.svelte';
-export { default as QR } from './Avatars/QR.svelte';
+import Flag from './Avatars/Flag.svelte';
+import Browser from './Avatars/Browser.svelte';
+import CreditCard from './Avatars/CreditCard.svelte';
+import Favicon from './Avatars/Favicon.svelte';
+import Image from './Avatars/Image.svelte';
+import QR from './Avatars/QR.svelte';
 
-export { default as Function } from './Functions/Function.svelte';
+import Function from './Functions/Function.svelte';
+
+export {
+	Appwrite,
+	SDK,
+	Create,
+	Delete,
+	CreateAnonymousSession,
+	CreateJWT,
+	MagicURL,
+	Preferences,
+	RecoverPassword,
+	Update,
+	User,
+	Verification,
+	AuthEmail,
+	AuthOAuth2,
+	Collection,
+	Document,
+	File,
+	FileList,
+	Storage,
+	Locale,
+	Countries,
+	Continents,
+	Languages,
+	Currencies,
+	PhoneCodes,
+	Flag,
+	Browser,
+	CreditCard,
+	Favicon,
+	Image,
+	QR,
+	Function
+};

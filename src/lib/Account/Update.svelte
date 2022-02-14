@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @slot {{
 	 * actions: {
@@ -14,7 +14,7 @@
 
 	const dispatch = createEventDispatcher();
 	const actions = {
-		name: async (/** @type {string} */ name) => {
+		name: async (name: string) => {
 			try {
 				const response = await Appwrite.sdk.account.updateName(name);
 				dispatch('successName', response);
@@ -24,7 +24,7 @@
 				throw error;
 			}
 		},
-		email: async (/** @type {string} */ email, /** @type {string} */ password) => {
+		email: async (email: string, password: string) => {
 			try {
 				const response = await Appwrite.sdk.account.updateEmail(email, password);
 				dispatch('successEmail', response);
@@ -34,7 +34,7 @@
 				throw error;
 			}
 		},
-		password: async (/** @type {string} */ password, /** @type {string} */ oldPassword) => {
+		password: async (password: string, oldPassword: string) => {
 			try {
 				const response = await Appwrite.sdk.account.updatePassword(password, oldPassword);
 				dispatch('successPassword', response);

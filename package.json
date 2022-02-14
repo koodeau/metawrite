@@ -1,7 +1,7 @@
 {
   "name": "metawrite",
   "license": "BSD-3-Clause",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Appwrite SDK with ready to go components for Svelte / SvelteKit",
   "keywords": [
     "svelte",

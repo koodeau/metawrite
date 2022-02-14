@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @slot {{
 	 * file: any;
@@ -13,22 +13,26 @@
 	 */
 	import { SDK as Appwrite } from '../appwrite';
 
-	export let file;
+	export let file: {
+		$id: string;
+		$permissions: { read?: string[] | ['']; write?: string[] | [''] };
+	};
+
 	const actions = {
 		download: () => Appwrite.sdk.storage.getFileDownload(file.$id),
 		view: () => Appwrite.sdk.storage.getFileView(file.$id),
 		preview: (
-			/** @type {number} */ width,
-			/** @type {number} */ height,
-			/** @type {string} */ gravity,
-			/** @type {number} */ quality,
-			/** @type {number} */ borderWidth,
-			/** @type {string} */ borderColor,
-			/** @type {number} */ borderRadius,
-			/** @type {number} */ opacity,
-			/** @type {number} */ rotation,
-			/** @type {string} */ background,
-			/** @type {string} */ output
+			width?: number,
+			height?: number,
+			gravity?: string,
+			quality?: number,
+			borderWidth?: number,
+			borderColor?: string,
+			borderRadius?: number,
+			opacity?: number,
+			rotation?: number,
+			background?: string,
+			output?: string
 		) =>
 			Appwrite.sdk.storage.getFilePreview(
 				file.$id,

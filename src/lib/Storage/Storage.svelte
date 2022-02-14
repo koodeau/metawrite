@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @slot {{
 	 * actions: {
@@ -11,15 +11,12 @@
 	import { createEventDispatcher } from 'svelte';
 	import { currentUser } from '../stores';
 
-	/**@type {File}*/ export let file;
-	/**@type {string}*/ export let fileId;
-
 	const dispatch = createEventDispatcher();
 
 	const actions = {
 		create: async (
-			/** @type {string} */ fileId,
-			/** @type {File} */ file,
+			fileId: string,
+			file: File,
 			read = [`user:${$currentUser.$id}`],
 			write = [`user:${$currentUser.$id}`]
 		) => {
@@ -54,16 +51,16 @@
 #### Example
 
 ```svelte
-<script>
+<script lang="ts">
     import { Storage } from "metawrite"
 
     // Required
-    /**@type {File}*/ let file;
-    /**@type {string}*/ let fileId = "unique()"; // this will generate random unique id, but you can use custom
+    let file: File;
+    let fileId = "unique()"; // this will generate random unique id, but you can use custom
 
     // Optional
-    /**@type {string[]}*/ let read;
-    /**@type {string[]}*/ let write;
+    let read: string[];
+    let write: string[];
 </script>
 
 <Storage {file} let:actions>
