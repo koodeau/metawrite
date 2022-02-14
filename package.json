@@ -1,6 +1,6 @@
 {
   "name": "metawrite",
-  "svelte": "src/lib/index.js",
+  "svelte": "package/index.js",
   "license": "BSD-3-Clause",
   "version": "0.1.0",
   "description": "Appwrite SDK with ready to go components for Svelte / SvelteKit",
@@ -30,7 +30,6 @@
     "node": ">=14"
   },
   "publishConfig": {
-    "@koodeau:registry": "https://npm.pkg.github.com",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
@@ -70,8 +69,8 @@
   "files": [
     "package"
   ],
-  "main": "package/index.js",
-  "types": "package/index.d.ts",
+  "main": "./package/index.js",
+  "types": "./package/index.d.ts",
   "dependencies": {
     "appwrite": "^6.0.1"
   }
