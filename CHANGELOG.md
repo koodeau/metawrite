@@ -10,7 +10,11 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.5](https://github.com/koodeau/metawrite/compare/v0.1.4...v0.1.5)
+
 #### [v0.1.4](https://github.com/koodeau/metawrite/compare/v0.1.3...v0.1.4)
+
+> 14 February 2022
 
 - experimental version [`b87af5c`](https://github.com/koodeau/metawrite/commit/b87af5c7199de46d39b194374f20f90ec508f1ff)
 
