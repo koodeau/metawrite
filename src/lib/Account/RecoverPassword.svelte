@@ -82,6 +82,17 @@
 
     const url = "http://localhost:3000/reset-password"; // URL that will point to the next step.
     let email = '';
+	
+	let password, passwordAgain = '';
+
+    const successComplete = e => {
+    //success callback
+    // `e` contains the user object
+  };
+
+  const failureComplete = e => {
+    //failure callback
+  }
 
     const successRecover = e => {
     //success callback
@@ -93,27 +104,13 @@
   }
 </script>
 
-<!-- localhost/forgot-password -->
+<!-- localhost/forgot-password --\>
 <RecoverPassword let:actions on:successRecover on:failureRecover>
     <input name="email" type="text" bind:value={email, url} placeholder="Email" />
     <button on:click{actions.recover(email)}>Recover Password</button>
 </RecoverPassword>
 
-<!-- Then on localhost/reset-password  -->
-<script>
-    import { RecoverPassword } from "metawrite";
-
-    let password, passwordAgain = '';
-
-    const successComplete = e => {
-    //success callback
-    // `e` contains the user object
-  };
-
-  const failureComplete = e => {
-    //failure callback
-  }
-</script>
+<!-- Then on localhost/reset-password  --\>
 
 <RecoverPassword let:actions on:successComplete on:failureComplete>
     <input type="password" name="password" bind:value{password} placeholder="Password" />
