@@ -1,5 +1,5 @@
 <script>
-    import { RecoverPassword } from "metawrite";
+    import { RecoverPassword } from "$lib";
 
     const url = "http://localhost:3000/reset-password"; // URL that will point to the next step.
     let email = '';
