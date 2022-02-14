@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.11](https://github.com/koodeau/metawrite/compare/v0.1.10...v0.1.11)
+
+- experimental changes [`b720826`](https://github.com/koodeau/metawrite/commit/b720826b9f24898fb9f567b952dcaf76be452331)
+
 #### [v0.1.10](https://github.com/koodeau/metawrite/compare/v0.1.9...v0.1.10)
+
+> 14 February 2022
 
 - Fix: added types to components and resolved warnings [`4840c54`](https://github.com/koodeau/metawrite/commit/4840c543039e888a3198d042c0370211205471f2)
 
