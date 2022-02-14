@@ -111,6 +111,13 @@
     esbuild "^0.13.15"
     tiny-glob "^0.2.9"
 
+"@sveltejs/adapter-node@^1.0.0-next.68":
+  version "1.0.0-next.68"
+  resolved "https://registry.npmjs.org/@sveltejs/adapter-node/-/adapter-node-1.0.0-next.68.tgz"
+  integrity sha512-MiEjtl15Aupm6bjirVlq0kkc9AL8qDXz/blsh4jYMsaiidmcEHeDgfZQFM5YiXy95DbxV30MAkhwCQiYK/J8Kw==
+  dependencies:
+    tiny-glob "^0.2.9"
+
 "@sveltejs/adapter-vercel@1.0.0-next.39":
   version "1.0.0-next.39"
   resolved "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.39.tgz"

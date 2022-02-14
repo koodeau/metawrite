@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-node';
 import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +12,10 @@ const config = {
 	extensions: ['.svelte'],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ 
+			out: 'build',
+			precompress: false
+		}),
 		package: {
 			dir: 'package',
 			emitTypes: true

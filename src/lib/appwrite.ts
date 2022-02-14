@@ -2,7 +2,7 @@ import { Appwrite } from 'appwrite';
 
 export const SDK = {
 	sdk: new Appwrite(),
-	setConfig: (/** @type {{ endpoint: string; project: string; locale?: string; }} */ config) => {
+	setConfig: (config: { endpoint: string; project: string; locale?: string; }) => {
 		SDK.sdk.setEndpoint(config.endpoint).setProject(config.project).setLocale(config.locale);
 	}
 };
