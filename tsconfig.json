@@ -32,6 +32,6 @@
 			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
+	"include": ["types", "src/lib/index.d.ts", "src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
 	"exclude": ["examples/**/*.d.ts", "examples/**/*.js", "examples/**/*.ts", "examples/**/*.svelte"]
 }

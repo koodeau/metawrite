@@ -1,7 +1,7 @@
 {
   "name": "metawrite",
   "license": "BSD-3-Clause",
-  "version": "0.1.5",
+  "version": "0.1.3",
   "description": "Appwrite SDK with ready to go components for Svelte / SvelteKit",
   "keywords": [
     "svelte",
@@ -64,6 +64,8 @@
     "typescript": "^4.5.5"
   },
   "type": "module",
+  "main": "./package/index.js",
+  "types": "./types/index.d.ts",
   "dependencies": {
     "appwrite": "^6.0.1"
   }
