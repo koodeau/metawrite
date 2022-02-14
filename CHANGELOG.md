@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.9](https://github.com/koodeau/metawrite/compare/v0.1.8...v0.1.9)
+
+- experimentsl fixes for Appwrite [`207e179`](https://github.com/koodeau/metawrite/commit/207e179f98d3374ced550198936711a37222f5ed)
+
 #### [v0.1.8](https://github.com/koodeau/metawrite/compare/v0.1.7...v0.1.8)
+
+> 14 February 2022
 
 - Fix: revert d.ts and improved package.json [`0d4d0b2`](https://github.com/koodeau/metawrite/commit/0d4d0b28b23df28f13eaca8efb8252288d609c25)
 - improved workflow [`b68f194`](https://github.com/koodeau/metawrite/commit/b68f194f92001fb5460e459db3d0adb7bbabe67c)
