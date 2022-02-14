@@ -149,11 +149,10 @@
     <button on:click={actions.logoutFrom("sessionId")}>Log out from specific session</button>
     <button on:click={actions.logoutAll()}>Log out from all sessions</button>
 
-    <!-- If logged in -->
+    <!-- If logged in --\>
     <p>Hi, {user.name}</p>
 </User>
 ```
 
-  
  -->
   
