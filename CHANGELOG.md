@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.4](https://github.com/koodeau/metawrite/compare/v0.1.3...v0.1.4)
+
+- experimental version [`b87af5c`](https://github.com/koodeau/metawrite/commit/b87af5c7199de46d39b194374f20f90ec508f1ff)
+
 #### [v0.1.3](https://github.com/koodeau/metawrite/compare/v0.1.2...v0.1.3)
+
+> 14 February 2022
 
 - used prettier and fixed npm publish dir [`2076ad3`](https://github.com/koodeau/metawrite/commit/2076ad30009506ce88cd2c81248a78b485fe6af2)
 
