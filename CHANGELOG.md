@@ -10,7 +10,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.8](https://github.com/koodeau/metawrite/compare/v0.1.7...v0.1.8)
+
+- Fix: revert d.ts and improved package.json [`0d4d0b2`](https://github.com/koodeau/metawrite/commit/0d4d0b28b23df28f13eaca8efb8252288d609c25)
+- improved workflow [`b68f194`](https://github.com/koodeau/metawrite/commit/b68f194f92001fb5460e459db3d0adb7bbabe67c)
+
 #### [v0.1.7](https://github.com/koodeau/metawrite/compare/v0.1.6...v0.1.7)
+
+> 14 February 2022
 
 - Fix: removed conflicting SDK export [`cc74e1d`](https://github.com/koodeau/metawrite/commit/cc74e1d78ac2214c34482170c1b6b0840935a304)
 
