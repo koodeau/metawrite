@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.3](https://github.com/koodeau/metawrite/compare/v0.1.2...v0.1.3)
+
+- used prettier and fixed npm publish dir [`2076ad3`](https://github.com/koodeau/metawrite/commit/2076ad30009506ce88cd2c81248a78b485fe6af2)
+
 #### [v0.1.2](https://github.com/koodeau/metawrite/compare/v0.1.1...v0.1.2)
+
+> 14 February 2022
 
 - Fix: added file extension for sdk export [`362c88c`](https://github.com/koodeau/metawrite/commit/362c88c180a060bf6fcfb8aa39f450459c31860e)
 
