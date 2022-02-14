@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.6](https://github.com/koodeau/metawrite/compare/v0.1.5...v0.1.6)
+
+- Fix: corrected type definitions [`a219b4f`](https://github.com/koodeau/metawrite/commit/a219b4fbe9430e672cd73482af984d337a0878de)
+
 #### [v0.1.5](https://github.com/koodeau/metawrite/compare/v0.1.4...v0.1.5)
+
+> 14 February 2022
 
 #### [v0.1.4](https://github.com/koodeau/metawrite/compare/v0.1.3...v0.1.4)
 
