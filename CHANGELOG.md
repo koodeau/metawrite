@@ -10,7 +10,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.0](https://github.com/koodeau/metawrite/compare/v0.0.4...v0.1.0)
+
+- Fixed: RecoverPassword component documentation [`6771781`](https://github.com/koodeau/metawrite/commit/67717819582ec3a8903d52debfd717ee86c91bf4)
+- Breaking Change: fixed package entry exports. Bug Fix [`2dc563f`](https://github.com/koodeau/metawrite/commit/2dc563fe01bfa947aca3e5cfcd6c5a537570f3c0)
+- modified workflows [`4fd7dc7`](https://github.com/koodeau/metawrite/commit/4fd7dc7149b9b57a55d89410b5b1f66cb9ba160c)
+
 #### [v0.0.4](https://github.com/koodeau/metawrite/compare/v0.0.0...v0.0.4)
+
+> 13 February 2022
 
 - added templates and workflows [`636797a`](https://github.com/koodeau/metawrite/commit/636797a9c25f9f4ad8658652030f87ef7da69f63)
 - added badges [`0da0ee4`](https://github.com/koodeau/metawrite/commit/0da0ee47f088252318e5d3bea95e26d2fc5e8f73)
