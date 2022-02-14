@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.7](https://github.com/koodeau/metawrite/compare/v0.1.6...v0.1.7)
+
+- Fix: removed conflicting SDK export [`cc74e1d`](https://github.com/koodeau/metawrite/commit/cc74e1d78ac2214c34482170c1b6b0840935a304)
+
 #### [v0.1.6](https://github.com/koodeau/metawrite/compare/v0.1.5...v0.1.6)
+
+> 14 February 2022
 
 - Fix: corrected type definitions [`a219b4f`](https://github.com/koodeau/metawrite/commit/a219b4fbe9430e672cd73482af984d337a0878de)
 
