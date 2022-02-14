@@ -26,7 +26,7 @@
 
 ---
 
-[![npm Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml)  [![Github Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish-github-packages.yml)
+[![npm Package](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/koodeau/metawrite/actions/workflows/npm-publish.yml) 
 
 Metawrite is [Appwrite](https://appwrite.io/) SDK with ready to go components for `Svelte` / `SvelteKit`
 
