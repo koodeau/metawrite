@@ -40,9 +40,8 @@
 	};
 </script>
 
-
 {#if $active}
-    <slot {actions} />
+	<slot {actions} />
 {/if}
 
 <!-- 

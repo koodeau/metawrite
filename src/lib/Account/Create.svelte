@@ -12,7 +12,12 @@
 
 	const dispatch = createEventDispatcher();
 	const actions = {
-		create: async (/** @type {string} */ userId, /** @type {string} */ email, /** @type {string} */ password, name = '') => {
+		create: async (
+			/** @type {string} */ userId,
+			/** @type {string} */ email,
+			/** @type {string} */ password,
+			name = ''
+		) => {
 			try {
 				const response = await Appwrite.sdk.account.create(userId, email, password, name);
 				dispatch('success', response);

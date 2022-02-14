@@ -11,7 +11,7 @@
 	import { active } from '../stores';
 	import { SDK as Appwrite } from '../appwrite';
 
-  const href = window.location.href;
+	const href = window.location.href;
 	const url = new URL(href);
 	const search = url.searchParams;
 	const userId = search.get('userId');
@@ -28,10 +28,7 @@
 				throw error;
 			}
 		},
-		complete: async (
-			/** @type {string} */ password,
-			/** @type {string} */ passwordAgain
-		) => {
+		complete: async (/** @type {string} */ password, /** @type {string} */ passwordAgain) => {
 			try {
 				const response = await Appwrite.sdk.account.updateRecovery(
 					userId,
