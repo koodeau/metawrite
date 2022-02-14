@@ -10,7 +10,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.1](https://github.com/koodeau/metawrite/compare/v0.1.0...v0.1.1)
+
+- Release v0.1.0 [`9439a1c`](https://github.com/koodeau/metawrite/commit/9439a1c675f9a0be115dc6af0bd5bcd141064d81)
+- deleted unused workflow [`e5de6ee`](https://github.com/koodeau/metawrite/commit/e5de6ee77fb94e5bef47694b5b25a1d75ebe4488)
+- Fixed: package svelte entrypoint [`54466a1`](https://github.com/koodeau/metawrite/commit/54466a12aa7d4454b502b58a8d759012c2041944)
+
 #### [v0.1.0](https://github.com/koodeau/metawrite/compare/v0.0.4...v0.1.0)
+
+> 14 February 2022
 
 - Fixed: RecoverPassword component documentation [`6771781`](https://github.com/koodeau/metawrite/commit/67717819582ec3a8903d52debfd717ee86c91bf4)
 - Breaking Change: fixed package entry exports. Bug Fix [`2dc563f`](https://github.com/koodeau/metawrite/commit/2dc563fe01bfa947aca3e5cfcd6c5a537570f3c0)
