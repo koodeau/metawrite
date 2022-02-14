@@ -2,7 +2,7 @@
   "name": "metawrite",
   "svelte": "package/index.js",
   "license": "BSD-3-Clause",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Appwrite SDK with ready to go components for Svelte / SvelteKit",
   "keywords": [
     "svelte",

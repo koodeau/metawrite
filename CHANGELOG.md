@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.2](https://github.com/koodeau/metawrite/compare/v0.1.1...v0.1.2)
+
+- Fix: added file extension for sdk export [`362c88c`](https://github.com/koodeau/metawrite/commit/362c88c180a060bf6fcfb8aa39f450459c31860e)
+
 #### [v0.1.1](https://github.com/koodeau/metawrite/compare/v0.1.0...v0.1.1)
+
+> 14 February 2022
 
 - Release v0.1.0 [`9439a1c`](https://github.com/koodeau/metawrite/commit/9439a1c675f9a0be115dc6af0bd5bcd141064d81)
 - deleted unused workflow [`e5de6ee`](https://github.com/koodeau/metawrite/commit/e5de6ee77fb94e5bef47694b5b25a1d75ebe4488)
