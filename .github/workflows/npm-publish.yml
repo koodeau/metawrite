@@ -17,6 +17,7 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm test
+      - run: npm run package
 
   publish-npm:
     needs: build
@@ -28,8 +29,6 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm run package
-      - run: cd package
-      - run: npm publish 
+      - run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
