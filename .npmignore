@@ -15,3 +15,4 @@ config.gypi
 package-lock.json
 src
 static
+examples
