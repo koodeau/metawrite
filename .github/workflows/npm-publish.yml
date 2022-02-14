@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: yarn package
       - run: npm test
 
   publish-npm:
@@ -29,7 +28,8 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: yarn package
-      - run: npm publish ./package
+      - run: npm run package
+      - run: cd package
+      - run: npm publish 
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

@@ -64,11 +64,6 @@
     "typescript": "^4.5.5"
   },
   "type": "module",
-  "files": [
-    "package"
-  ],
-  "main": "./package/index.js",
-  "types": "./package/index.d.ts",
   "dependencies": {
     "appwrite": "^6.0.1"
   }
