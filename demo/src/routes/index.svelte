@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Appwrite, Collection } from '$lib/index';
+	import { Appwrite, Collection } from 'metawrite';
 
 	const collectionId: string = 'faqs';
 	const config = {

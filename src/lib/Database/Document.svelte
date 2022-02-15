@@ -10,10 +10,10 @@
 	 * }}
 	 */
 	import { getContext } from 'svelte';
-	import { cacheKey } from '../keys';
+	import { cacheKey } from '../_keys';
 	import { createEventDispatcher } from 'svelte';
-	import { documents } from '../stores';
-	import { SDK as Appwrite } from '../appwrite';
+	import { documents } from '../_stores';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	const dispatch = createEventDispatcher();
 	/**

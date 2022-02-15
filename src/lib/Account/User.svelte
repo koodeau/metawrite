@@ -27,8 +27,8 @@
 	// @slot {{ error: object }} error
 
 	import { createEventDispatcher } from 'svelte';
-	import { active, currentUser } from '../stores';
-	import { SDK as Appwrite } from '../appwrite';
+	import { active, currentUser } from '../_stores';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	const dispatch = createEventDispatcher();
 

@@ -7,7 +7,7 @@
 	 * }}}
 	 * @slot {{ error: object }} error
 	 */
-	import { SDK as Appwrite } from '../appwrite';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	const fetchContinents = () => Appwrite.sdk.locale.getContinents();
 

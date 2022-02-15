@@ -7,8 +7,8 @@
 	 * }}
 	 */
 	import { createEventDispatcher } from 'svelte';
-	import { active } from '../stores';
-	import { SDK as Appwrite } from '../appwrite';
+	import { active } from '../_stores';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	const dispatch = createEventDispatcher();
 	const actions = {

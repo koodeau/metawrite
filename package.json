@@ -59,6 +59,8 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.44.0",
     "svelte-check": "^2.4.3",
     "svelte-preprocess": "^4.10.1",
@@ -75,9 +77,13 @@
     "*.d.ts"
   ],
   "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "svelte": "./index.svelte",
+  "main": "./index.svelte",
+  "types": "./index.d.ts",
   "dependencies": {
     "appwrite": "^6.0.1"
+  },
+  "exports": {
+    ".": "./index.svelte"
   }
 }

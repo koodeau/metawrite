@@ -6,12 +6,12 @@
 		"target": "esnext",
 		"allowSyntheticDefaultImports": true,
 		"types": ["svelte"],
-		"typeRoots": ["./node_modules/@types", "./src/lib", "./src/lib/**/*"],
+		"typeRoots": ["./node_modules/@types", "./src/lib/*", "./src/lib/**/*"],
 		/**
 			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
 			to enforce using \`import type\` instead of \`import\` for Types.
 		*/
-		"importsNotUsedAsValues": "error",
+		// "importsNotUsedAsValues": "error",
 		/**
 			TypeScript doesn't know about import usages in the template because it only sees the
 			script of a Svelte file. Therefore preserve all value imports. Requires TS 4.5 or higher.
@@ -35,6 +35,6 @@
 			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"include": ["src/lib/index.d.ts", "src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"], // "package"
+	"include": ["src/lib/*.d.ts", "src/lib/**/*.d.ts", "src/lib/**/*.js", "src/lib/*.js", "src/lib/**/*.ts", "src/lib/*.ts", "src/lib/**/*.svelte", "src/lib/*.svelte"], // "package"
 	"exclude": ["examples/**/*.d.ts", "examples/**/*.js", "examples/**/*.ts", "examples/**/*.svelte"]
 }

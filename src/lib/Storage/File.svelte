@@ -11,7 +11,7 @@
 	 * }}}
 	 * @slot {{ error: object }} error
 	 */
-	import { SDK as Appwrite } from '../appwrite';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	export let file: {
 		$id: string;

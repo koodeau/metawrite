@@ -10,9 +10,9 @@
 	 * @slot {{ error: object }} error
 	 */
 	import { setContext } from 'svelte';
-	import { cacheKey } from '../keys';
-	import { SDK as Appwrite } from '../appwrite';
-	import { currentUser, documents } from '../stores';
+	import { cacheKey } from '../_keys';
+	import { SDK as Appwrite } from '../_appwrite';
+	import { currentUser, documents } from '../_stores';
 
 	/**
 	 * @name Collection ID

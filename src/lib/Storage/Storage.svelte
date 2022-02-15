@@ -6,10 +6,10 @@
 	 * }}}
 	 * @slot {{ error: object }} error
 	 */
-	import { SDK as Appwrite } from '../appwrite';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	import { createEventDispatcher } from 'svelte';
-	import { currentUser } from '../stores';
+	import { currentUser } from '../_stores';
 
 	const dispatch = createEventDispatcher();
 

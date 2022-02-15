@@ -6,8 +6,8 @@
 	 * @slot {{ error: object }} error
 	 */
 	import { createEventDispatcher } from 'svelte';
-	import { SDK as Appwrite } from '../appwrite';
-	import { currentUser } from '../stores';
+	import { SDK as Appwrite } from '../_appwrite';
+	import { currentUser } from '../_stores';
 
 	const dispatch = createEventDispatcher();
 	const authorize = (/** @type {string} */ email, /** @type {string} */ password) => {

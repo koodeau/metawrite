@@ -1,13 +1,10 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
-	import { active } from './stores';
-	import { SDK as Appwrite } from './appwrite';
+	import { active } from './_stores';
+	import { SDK as Appwrite } from './_appwrite';
 
-	/** @type {string} */
-	export let endpoint;
-	/** @type {string} */
-	export let project;
-	/** @type {string} */
+	export let endpoint: string;
+	export let project: string;
 	export let locale = 'en';
 
 	onMount(() => {

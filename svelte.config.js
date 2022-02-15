@@ -1,16 +1,13 @@
 import adapter from '@sveltejs/adapter-node';
-import sveltePreprocess from 'svelte-preprocess';
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: sveltePreprocess({
+	preprocess: preprocess({
 		typescript: true
 	}),
-
-	extensions: ['.svelte'],
-
 	kit: {
 		adapter: adapter({ 
 			out: 'build',
@@ -19,7 +16,7 @@ const config = {
 		package: {
 			dir: 'package',
 			emitTypes: true
-		}
+		},
 	}
 };
 

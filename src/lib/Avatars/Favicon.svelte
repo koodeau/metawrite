@@ -1,5 +1,5 @@
 <script>
-	import { SDK as Appwrite } from '../appwrite';
+	import { SDK as Appwrite } from '../_appwrite';
 
 	export let url;
 
