@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.13](https://github.com/koodeau/metawrite/compare/v0.1.12...v0.1.13)
+
+- Fix: resolved unused exports from package.json [`c65ac59`](https://github.com/koodeau/metawrite/commit/c65ac5955b646bf1fd2a8699440c383017bc8fe2)
+
 #### [v0.1.12](https://github.com/koodeau/metawrite/compare/v0.1.11...v0.1.12)
+
+> 14 February 2022
 
 #### [v0.1.11](https://github.com/koodeau/metawrite/compare/v0.1.10...v0.1.11)
 
