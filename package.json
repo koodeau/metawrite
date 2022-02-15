@@ -40,7 +40,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-    "prettier": "prettier --write --plugin-search-dir= ./src/lib/**/*.{js,svelte} && prettier --write --plugin-search-dir= ./src/lib/*.{js,svelte}",
+    "prettier": "prettier --write --plugin-search-dir= ./src/lib/**/*.{js,svelte,ts} && prettier --write --plugin-search-dir= ./src/lib/*.{ts,svelte}",
     "svelte-check": "svelte-check",
     "version": "auto-changelog -p --hide-credit --template changelog.hbs && git add CHANGELOG.md",
     "test": "svelte-check --workspace src/lib",
@@ -59,8 +59,6 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.44.0",
     "svelte-check": "^2.4.3",
     "svelte-preprocess": "^4.10.1",
@@ -81,7 +79,8 @@
   "main": "./index.svelte",
   "types": "./index.d.ts",
   "dependencies": {
-    "appwrite": "^6.0.1"
+    "appwrite": "^6.0.1",
+    "axios": "^0.26.0"
   },
   "exports": {
     ".": "./index.svelte"

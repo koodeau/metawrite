@@ -1,11 +1,26 @@
 <script>
-    import { MagicURL } from "$lib";
+    import { MagicURL } from "metawrite";
 
     const userId = "32h2hj24h2"
-    const email = "user@example.com"
-    const url = "http://example.com" // optional
+    let email = ""
+    const url = "http://localhost:3000/page-to-complete"
+
+	const successCreate = (e) => {
+		console.log(e)
+	}
+	const failureCreate = (e) => {
+		console.log(e)
+	}
+	const successComplete = (e) => {
+		console.log(e)
+	}
+	const failureComplete = (e) => {
+		console.log(e)
+	}
 </script>
 
-<MagicURL let:actions>
-    <button on:click={actions.create(userId, email, url)}>Create MagicURL</button>
+<MagicURL let:actions on:successCreate on:successComplete on:failureCreate on:failureComplete>
+		<input type="email" name="email" placeholder="Email" bind:value={email} />
+		<button on:click={actions.create(userId, email, url)}>Send login link</button>
+		<button on:click={actions.complete()}>Confirm Login</button>
 </MagicURL>
