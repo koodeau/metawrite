@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.14](https://github.com/koodeau/metawrite/compare/v0.1.13...v0.1.14)
+
+- Fix: wrapped entrypoint into module context [`93edd78`](https://github.com/koodeau/metawrite/commit/93edd786007d9a2f814f5fef0535846705144161)
+
 #### [v0.1.13](https://github.com/koodeau/metawrite/compare/v0.1.12...v0.1.13)
+
+> 15 February 2022
 
 - Fix: resolved unused exports from package.json [`c65ac59`](https://github.com/koodeau/metawrite/commit/c65ac5955b646bf1fd2a8699440c383017bc8fe2)
 
