@@ -1,5 +1,4 @@
-<script>
-    
+<script context="module">
 	export { default as Appwrite } from './Init.svelte';
 
 	export { default as Create } from './Account/Create.svelte';
