@@ -1,12 +1,11 @@
 {
 	"compilerOptions": {
-		"moduleResolution": "node",
-		"module": "es2020",
+		"moduleResolution": "Node",
+		"module": "esnext",
 		"lib": ["esnext"],
 		"target": "esnext",
 		"allowSyntheticDefaultImports": true,
 		"types": ["svelte"],
-		"typeRoots": ["./node_modules/@types", "./src/lib/*", "./src/lib/**/*"],
 		/**
 			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
 			to enforce using \`import type\` instead of \`import\` for Types.

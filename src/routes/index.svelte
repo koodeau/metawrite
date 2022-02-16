@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Appwrite, User, MagicURL } from '$lib/index.svelte';
+	import { Appwrite, User, MagicURL } from '$lib';
 
 	// const collectionId: string = 'faqs';
 	const config = {
