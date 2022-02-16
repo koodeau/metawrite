@@ -55,8 +55,8 @@
 			getDocuments = fetchDocuments();
 		},
 		create: async (
-			/**@type {object}*/ data = {},
 			/**@type {string}*/ documentId = 'unique()',
+			/**@type {object}*/ data = {},
 			/**@type {string[]}*/ read = [`user:${$currentUser.$id}`],
 			/**@type {string[]}*/ write = [`user:${$currentUser.$id}`]
 		) => {
