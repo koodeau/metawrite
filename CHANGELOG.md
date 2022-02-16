@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.2](https://github.com/koodeau/metawrite/compare/v0.2.1...v0.2.2)
+
+- fixed typo in component that caused errors [`42a15f7`](https://github.com/koodeau/metawrite/commit/42a15f7907bc130e32df610d30d0f6ae4ae67ca5)
+
 #### [v0.2.1](https://github.com/koodeau/metawrite/compare/v0.2.0...v0.2.1)
+
+> 16 February 2022
 
 - Fix: added unique user id to MagicURL and fixed documents creation in Collection component [`7a2b5e5`](https://github.com/koodeau/metawrite/commit/7a2b5e543dc59da121ff654f370fdad87442ae00)
 - added missing info to changelog [`2e32805`](https://github.com/koodeau/metawrite/commit/2e3280568b8fae0a499d648e1e6901b9b07f3aaa)
