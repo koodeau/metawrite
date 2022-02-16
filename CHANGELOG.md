@@ -10,10 +10,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.1](https://github.com/koodeau/metawrite/compare/v0.2.0...v0.2.1)
+
+- Fix: added unique user id to MagicURL and fixed documents creation in Collection component [`7a2b5e5`](https://github.com/koodeau/metawrite/commit/7a2b5e543dc59da121ff654f370fdad87442ae00)
+- added missing info to changelog [`2e32805`](https://github.com/koodeau/metawrite/commit/2e3280568b8fae0a499d648e1e6901b9b07f3aaa)
+
 #### [v0.2.0](https://github.com/koodeau/metawrite/compare/v0.1.14...v0.2.0)
 
-- **Breaking Change:** Modified `MagicURL` component to be able to create, automatically validate and store user session. Read updated documentation. [`2d3c0e1`](https://github.com/koodeau/metawrite/commit/2d3c0e1da732ce3bc2b682620bc89ab4c00655e9)
-- Added: new dependency - `axios`
+> 15 February 2022
+
+- Breaking Change: Modified MagicURL component to be able to create, automatically validate and store user session. Read updated documentation [`2d3c0e1`](https://github.com/koodeau/metawrite/commit/2d3c0e1da732ce3bc2b682620bc89ab4c00655e9)
 
 #### [v0.1.14](https://github.com/koodeau/metawrite/compare/v0.1.13...v0.1.14)
 
