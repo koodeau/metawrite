@@ -79,8 +79,7 @@
   "main": "./index.svelte",
   "types": "./index.d.ts",
   "dependencies": {
-    "appwrite": "^6.0.1",
-    "axios": "^0.26.0"
+    "appwrite": "^6.0.1"
   },
   "exports": {
     ".": "./index.svelte"

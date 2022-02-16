@@ -9,7 +9,6 @@
 	import { createEventDispatcher } from 'svelte';
 	import { active } from '../_stores';
 	import { SDK as Appwrite } from '../_appwrite';
-	import axios from 'axios';
 	import { currentUser } from '../_stores';
 
 	const href = window.location.href;
@@ -18,12 +17,13 @@
 	const userId = search.get('userId');
 	const secret = search.get('secret');
 
-	const endpoint = Appwrite.sdk.config.endpoint;
-	const project = Appwrite.sdk.config.project;
-
 	const dispatch = createEventDispatcher();
 	const actions = {
-		create: async (/** @type {string} */ userId, /** @type {string} */ email, url = '') => {
+		create: async (
+			/** @type {string} */ userId = 'unique()',
+			/** @type {string} */ email,
+			/** @type {string} */ url
+		) => {
 			try {
 				const response = await Appwrite.sdk.account.createMagicURLSession(userId, email, url);
 				dispatch('successCreate', response);
@@ -35,18 +35,11 @@
 		},
 		complete: async () => {
 			try {
-				const response = await axios.put(
-					`${endpoint}/account/sessions/magic-url`,
-					{
-						userId: userId,
-						secret: secret
-					},
-					{
-						headers: {
-							'X-Appwrite-Project': `${project}`
-						}
-					}
+				const response = await Appwrite.sdk.account.updateMagicURLSession(
+					/** @type {string} */ userId,
+					/** @type {string} */ secret
 				);
+				currentUser.reload();
 				dispatch('successComplete', response);
 			} catch (error) {
 				dispatch('failureComplete', error);
@@ -70,7 +63,7 @@ Creates Magic URL Session.
 
 | Name                        | Description                                                  |
 | --------------------------- | ------------------------------------------------------------ |
-| `create()` | Creates Magic URL Session. |
+| `create(email, url)` | Creates Magic URL Session. email is required, url is to point on complete step `string` |
 | `complete()` | Validates and completes Magic URL Session. |
 
 #### Example 

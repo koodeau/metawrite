@@ -55,11 +55,18 @@
 			getDocuments = fetchDocuments();
 		},
 		create: async (
-			/**@type {string}*/ data = '',
+			/**@type {object}*/ data = {},
+			/**@type {string}*/ documentId = 'uninque()',
 			/**@type {string[]}*/ read = [`user:${$currentUser.$id}`],
 			/**@type {string[]}*/ write = [`user:${$currentUser.$id}`]
 		) => {
-			const response = await Appwrite.sdk.database.createDocument(collectionId, data, read, write);
+			const response = await Appwrite.sdk.database.createDocument(
+				collectionId,
+				documentId,
+				data,
+				read,
+				write
+			);
 			actions.reload();
 			return response;
 		}
@@ -114,7 +121,7 @@
 | Name | Description |
 | --- | --- |
 | `reload()` | Reload. |
-| `create(data, read, write)` | Creates a Document. `data` - `@type - {string}`.<br /> `read`/`write` is optional `@type - {string[]}` |
+| `create(documentId, data, read, write)` | Creates a Document. `data` - `@type - {string}`.<br /> `read`/`write` is optional `@type - {string[]}`.<br />`documentId` is optional, by default generates unique `@type - {string}`. |
 
 - **let:documents**
 - **let:error**

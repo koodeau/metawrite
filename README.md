@@ -998,7 +998,7 @@ Creates Magic URL Session and stores session information.
 
 | Name       | Description                |
 | ---------- | -------------------------- |
-| `create()` | Creates Magic URL Session. |
+| `create(email, url)` | Creates Magic URL Session. email is required, url is to point on complete step `string` |
 | `complete()` | Automatically validates url info and completes Magic URL Session. |
 
 #### Example
@@ -1230,7 +1230,7 @@ The Database components allow you to create structured collections of documents,
 | Name | Description |
 | --- | --- |
 | `reload()` | Reload. |
-| `create(data, read, write)` | Creates a Document. `data` - `@type - {string}`.<br /> `read`/`write` is optional `@type - {string[]}` |
+| `create(documentId, data, read, write)` | Creates a Document. `data` - `@type - {string}`.<br /> `read`/`write` is optional `@type - {string[]}`.<br />`documentId` is optional, by default generates unique `@type - {string}`. |
 
 - **let:documents**
 - **let:error**
