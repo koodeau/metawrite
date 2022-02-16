@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.3](https://github.com/koodeau/metawrite/compare/v0.2.2...v0.2.3)
+
+- Fix: resolved bug with order of Collection create attributes [`cd34465`](https://github.com/koodeau/metawrite/commit/cd3446572cd994933b11c5df016d9d1c954d5a3b)
+
 #### [v0.2.2](https://github.com/koodeau/metawrite/compare/v0.2.1...v0.2.2)
+
+> 16 February 2022
 
 - fixed typo in component that caused errors [`42a15f7`](https://github.com/koodeau/metawrite/commit/42a15f7907bc130e32df610d30d0f6ae4ae67ca5)
 
