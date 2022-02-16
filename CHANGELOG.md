@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.5](https://github.com/koodeau/metawrite/compare/v0.2.4...v0.2.5)
+
+- Fix: added devDependency cross-fetch ro resolve fetch import [`844558b`](https://github.com/koodeau/metawrite/commit/844558b80f7e7f8b9c8e05a9d34861a5b6da23b9)
+
 #### [v0.2.4](https://github.com/koodeau/metawrite/compare/v0.2.3...v0.2.4)
+
+> 16 February 2022
 
 - Fix: changed index.d.ts exports and tsconfig that affected components documentation [`a11c74e`](https://github.com/koodeau/metawrite/commit/a11c74e4cfa9c1dfbf83b8dae83004f4d35a8714)
 
