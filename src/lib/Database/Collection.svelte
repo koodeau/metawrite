@@ -56,7 +56,7 @@
 		},
 		create: async (
 			/**@type {object}*/ data = {},
-			/**@type {string}*/ documentId = 'uninque()',
+			/**@type {string}*/ documentId = 'unique()',
 			/**@type {string[]}*/ read = [`user:${$currentUser.$id}`],
 			/**@type {string[]}*/ write = [`user:${$currentUser.$id}`]
 		) => {
