@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.6](https://github.com/koodeau/metawrite/compare/v0.2.5...v0.2.6)
+
+- Update: removed unused dependencies [`593ac5f`](https://github.com/koodeau/metawrite/commit/593ac5f3f9571fdb83ee0cf73ea687c438c13539)
+
 #### [v0.2.5](https://github.com/koodeau/metawrite/compare/v0.2.4...v0.2.5)
+
+> 16 February 2022
 
 - Fix: added devDependency cross-fetch ro resolve fetch import [`844558b`](https://github.com/koodeau/metawrite/commit/844558b80f7e7f8b9c8e05a9d34861a5b6da23b9)
 
