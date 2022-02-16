@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.4](https://github.com/koodeau/metawrite/compare/v0.2.3...v0.2.4)
+
+- Fix: changed index.d.ts exports and tsconfig that affected components documentation [`a11c74e`](https://github.com/koodeau/metawrite/commit/a11c74e4cfa9c1dfbf83b8dae83004f4d35a8714)
+
 #### [v0.2.3](https://github.com/koodeau/metawrite/compare/v0.2.2...v0.2.3)
+
+> 16 February 2022
 
 - Fix: resolved bug with order of Collection create attributes [`cd34465`](https://github.com/koodeau/metawrite/commit/cd3446572cd994933b11c5df016d9d1c954d5a3b)
 
