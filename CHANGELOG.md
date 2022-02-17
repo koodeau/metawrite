@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.3.0](https://github.com/koodeau/metawrite/compare/v0.2.6...v0.3.0)
+
+- Fix: added js entrypoint instead of svelte [`58cd1f7`](https://github.com/koodeau/metawrite/commit/58cd1f70f9f1ca40e0d90b8e115adf88523a83d4)
+
 #### [v0.2.6](https://github.com/koodeau/metawrite/compare/v0.2.5...v0.2.6)
+
+> 16 February 2022
 
 - Update: removed unused dependencies [`593ac5f`](https://github.com/koodeau/metawrite/commit/593ac5f3f9571fdb83ee0cf73ea687c438c13539)
 
