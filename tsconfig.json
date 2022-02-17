@@ -4,6 +4,7 @@
 		"module": "ESNext",
 		"lib": ["ESNext"],
 		"target": "ESNext",
+		"types": [ "svelte" ],
 		"allowSyntheticDefaultImports": true,
 		"declaration": true,
 		"declarationDir": "./types",
