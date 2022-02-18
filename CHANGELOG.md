@@ -10,7 +10,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.3.1](https://github.com/koodeau/metawrite/compare/v0.3.0...v0.3.1)
+
+- Create LICENSE [`#2`](https://github.com/koodeau/metawrite/pull/2)
+- add LICENSE [`3b8c9ad`](https://github.com/koodeau/metawrite/commit/3b8c9adba525333115dd7127036ae98317ab4a3e)
+
 #### [v0.3.0](https://github.com/koodeau/metawrite/compare/v0.2.6...v0.3.0)
+
+> 17 February 2022
 
 - Fix: added js entrypoint instead of svelte [`58cd1f7`](https://github.com/koodeau/metawrite/commit/58cd1f70f9f1ca40e0d90b8e115adf88523a83d4)
 
