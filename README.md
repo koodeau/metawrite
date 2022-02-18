@@ -38,6 +38,12 @@ This package is maintained by [Increasio](https://increas.io).
 > 
 > versions `n.x.x` might include some major breaking changes. See [Release Notes](https://github.com/koodeau/metawrite/blob/main/CHANGELOG.md).
 
+## Important info
+
+The package is fully working and compatible with Appwrite Server 0.12, Web SDK 6, and SvelteKit. But people are currently facing difficulties with `npm install metawrite`. We have ready and configured [**SvelteKit template**](https://github.com/koodeau/sveltekit-metawrite) that uses Metawrite and could be also used as Docker image like described [here](https://github.com/koodeau/sveltekit-metawrite#appwrite-and-sveltekit-combo).
+
+> Please consider using [template](https://github.com/koodeau/sveltekit-metawrite), this is temporary 
+
 # Documentation
 
 ### Installation
