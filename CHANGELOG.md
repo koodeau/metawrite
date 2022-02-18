@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.3.2](https://github.com/koodeau/metawrite/compare/v0.3.1...v0.3.2)
+
+- Update README.md [`ff039ac`](https://github.com/koodeau/metawrite/commit/ff039acc860fe12f428df19b88caf7309737806b)
+
 #### [v0.3.1](https://github.com/koodeau/metawrite/compare/v0.3.0...v0.3.1)
+
+> 18 February 2022
 
 - Create LICENSE [`#2`](https://github.com/koodeau/metawrite/pull/2)
 - add LICENSE [`3b8c9ad`](https://github.com/koodeau/metawrite/commit/3b8c9adba525333115dd7127036ae98317ab4a3e)
