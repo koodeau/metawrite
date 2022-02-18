@@ -10,7 +10,11 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.3.3](https://github.com/koodeau/metawrite/compare/v0.3.2...v0.3.3)
+
 #### [v0.3.2](https://github.com/koodeau/metawrite/compare/v0.3.1...v0.3.2)
+
+> 18 February 2022
 
 - Update README.md [`ff039ac`](https://github.com/koodeau/metawrite/commit/ff039acc860fe12f428df19b88caf7309737806b)
 
