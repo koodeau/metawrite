@@ -182,6 +182,7 @@ yarn add metawrite
 			- [Directives](#directives-24)
 			- [Example](#example-18)
 	- [Realtime](#realtime)
+			- [Arguments](#arguments-16)
 			- [Directives](#directives-25)
 			- [Example](#example-19)
 	- [Storage](#storage)
@@ -189,12 +190,12 @@ yarn add metawrite
 			- [Directives](#directives-26)
 			- [Example](#example-20)
 		- [`<FileList />`](#filelist-)
-			- [Arguments](#arguments-16)
+			- [Arguments](#arguments-17)
 			- [Slots](#slots-5)
 			- [Directives](#directives-27)
 			- [Example](#example-21)
 		- [`<File />`](#file-)
-			- [Arguments](#arguments-17)
+			- [Arguments](#arguments-18)
 			- [Directives](#directives-28)
 			- [Example](#example-22)
 	- [Functions](#functions)
@@ -208,7 +209,7 @@ yarn add metawrite
 			- [Slots](#slots-7)
 			- [Example](#example-24)
 		- [`<Countries />`](#countries-)
-			- [Arguments](#arguments-18)
+			- [Arguments](#arguments-19)
 			- [Slots](#slots-8)
 			- [Directives](#directives-31)
 			- [Example](#example-25)
@@ -1313,13 +1314,17 @@ Instead of requesting new data via HTTP, the subscription will receive new data 
 
 This lets you build an interactive and responsive user experience by providing information from all of Appwrite's services in realtime.
 
+#### Arguments
+
+- channels - *required* `string | string[]`
+
 #### Directives
 
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `subscribe(channels)` | Subscribing to all updates related to one or more channels. `channels: string | string[]` |
-| `unsubscribe(channels)` | If you no longer want to receive updates from a subscription, you can unsubscribe so that your callbacks are no longer called. `channels: string | string[]` |
+| `subscribe()` | Subscribing to all updates related to one or more channels. |
+| `unsubscribe()` | If you no longer want to receive updates from a subscription, you can unsubscribe so that your callbacks are no longer called. |
 
 #### Example 
 
@@ -1328,9 +1333,9 @@ This lets you build an interactive and responsive user experience by providing i
 	import { Realtime } from 'metawrite';
 </script>
 
-<Realtime let:actions>
-	<button on:click={actions.subscribe('account')}>Subscribe to Account channel</button>
-	<button on:click={actions.unsubscribe('account')}>Unsubscribe from Account channel</button>
+<Realtime channels="account" let:actions>
+	<button on:click={actions.subscribe()}>Subscribe to Account channel</button>
+	<button on:click={actions.unsubscribe()}>Unsubscribe from Account channel</button>
 </Realtime>
 ```
 
