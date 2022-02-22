@@ -63,6 +63,7 @@ yarn add metawrite
 # Table of contents
 
 - [Support Us](#support-us)
+	- [Important info](#important-info)
 - [Documentation](#documentation)
 		- [Installation](#installation)
 - [Table of contents](#table-of-contents)
@@ -180,50 +181,53 @@ yarn add metawrite
 			- [Slots](#slots-4)
 			- [Directives](#directives-24)
 			- [Example](#example-18)
-	- [Storage](#storage)
-		- [`<Storage />`](#storage-)
+	- [Realtime](#realtime)
 			- [Directives](#directives-25)
 			- [Example](#example-19)
+	- [Storage](#storage)
+		- [`<Storage />`](#storage-)
+			- [Directives](#directives-26)
+			- [Example](#example-20)
 		- [`<FileList />`](#filelist-)
 			- [Arguments](#arguments-16)
 			- [Slots](#slots-5)
-			- [Directives](#directives-26)
-			- [Example](#example-20)
-		- [`<File />`](#file-)
-			- [Arguments](#arguments-17)
 			- [Directives](#directives-27)
 			- [Example](#example-21)
+		- [`<File />`](#file-)
+			- [Arguments](#arguments-17)
+			- [Directives](#directives-28)
+			- [Example](#example-22)
 	- [Functions](#functions)
 		- [`<Function />`](#function-)
-			- [Directives](#directives-28)
+			- [Directives](#directives-29)
 			- [Slots](#slots-6)
-			- [Example](#example-22)
+			- [Example](#example-23)
 	- [Locale](#locale)
 		- [`<Continents />`](#continents-)
-			- [Directives](#directives-29)
+			- [Directives](#directives-30)
 			- [Slots](#slots-7)
-			- [Example](#example-23)
+			- [Example](#example-24)
 		- [`<Countries />`](#countries-)
 			- [Arguments](#arguments-18)
 			- [Slots](#slots-8)
-			- [Directives](#directives-30)
-			- [Example](#example-24)
-		- [`<Currencies />`](#currencies-)
-			- [Slots](#slots-9)
 			- [Directives](#directives-31)
 			- [Example](#example-25)
-		- [`<Languages />`](#languages-)
-			- [Slots](#slots-10)
+		- [`<Currencies />`](#currencies-)
+			- [Slots](#slots-9)
 			- [Directives](#directives-32)
 			- [Example](#example-26)
-		- [`<Locale />`](#locale-)
-			- [Slots](#slots-11)
+		- [`<Languages />`](#languages-)
+			- [Slots](#slots-10)
 			- [Directives](#directives-33)
 			- [Example](#example-27)
-		- [`<PhoneCodes />`](#phonecodes-)
-			- [Slots](#slots-12)
+		- [`<Locale />`](#locale-)
+			- [Slots](#slots-11)
 			- [Directives](#directives-34)
 			- [Example](#example-28)
+		- [`<PhoneCodes />`](#phonecodes-)
+			- [Slots](#slots-12)
+			- [Directives](#directives-35)
+			- [Example](#example-29)
 - [Stack](#stack)
 
 # Usage
@@ -281,6 +285,7 @@ Must be initialised and wrap every `metawrite` component.
 | `endpoint` | Your Appwrite endpoint. `@type - {string}`      |
 | `project`  | Your project ID. `@type - {string}`             |
 | `locale`   | _Optional_ The users locale. `@type - {string}` |
+| `realtime`   | _Optional_ Set Custom realtime endpoint. By default the same as `endpoint`. `@type - {string}` |
 
 ## Create user
 
@@ -1296,6 +1301,37 @@ The Database components allow you to create structured collections of documents,
 		</Document>
 	{/each}
 </Collection>
+```
+
+## Realtime
+
+For more information about using Realtime in Appwrite see [Realtime documentation](https://appwrite.io/docs/realtime).
+
+Realtime allows you to listen to any events on the server-side in realtime using the subscribe method.
+
+Instead of requesting new data via HTTP, the subscription will receive new data every time it changes, any connected client receives that update within milliseconds via a WebSocket connection.
+
+This lets you build an interactive and responsive user experience by providing information from all of Appwrite's services in realtime.
+
+#### Directives
+
+**let:actions**
+| Name | Description |
+| --- | --- |
+| `subscribe(channels)` | Subscribing to all updates related to one or more channels. `channels: string | string[]` |
+| `unsubscribe(channels)` | If you no longer want to receive updates from a subscription, you can unsubscribe so that your callbacks are no longer called. `channels: string | string[]` |
+
+#### Example 
+
+```svelte
+<script>
+	import { Realtime } from 'metawrite';
+</script>
+
+<Realtime let:actions>
+	<button on:click={actions.subscribe('account')}>Subscribe to Account channel</button>
+	<button on:click={actions.unsubscribe('account')}>Unsubscribe from Account channel</button>
+</Realtime>
 ```
 
 ## Storage
