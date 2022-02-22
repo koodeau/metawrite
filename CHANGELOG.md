@@ -10,7 +10,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.4.0](https://github.com/koodeau/metawrite/compare/v0.3.4...v0.4.0)
+
+- New: Realtime component with new actions. See docs [`812fa1a`](https://github.com/koodeau/metawrite/commit/812fa1aab7e06919333e07b30a2ede9e2d60662c)
+- New: added custom Realtime endpoint option for Appwrite init [`b43447c`](https://github.com/koodeau/metawrite/commit/b43447c46b2450e4bfc311aad99957d5c565dfe7)
+
 #### [v0.3.4](https://github.com/koodeau/metawrite/compare/v0.3.3...v0.3.4)
+
+> 22 February 2022
 
 - Fix: added default export for File component [`8180ae9`](https://github.com/koodeau/metawrite/commit/8180ae94684ac7a7d395659529a075dc6172d05c)
 
