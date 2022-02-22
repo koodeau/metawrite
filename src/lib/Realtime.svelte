@@ -36,6 +36,8 @@ For more information about using Realtime in Appwrite see [Realtime documentatio
 
 #### Directives
 
+**let:payload** - The payload from the subscription will contain [following properties](https://appwrite.io/docs/realtime#payload).
+
 **let:actions**
 | Name | Description |
 | --- | --- |
@@ -49,7 +51,8 @@ For more information about using Realtime in Appwrite see [Realtime documentatio
 	import { Realtime } from 'metawrite';
 </script>
 
-<Realtime channels="account" let:actions>
+<Realtime channels="account" let:actions let:payload>
+	<h1>{payload.timestamp}</h1>
 	<button on:click={actions.subscribe()}>Subscribe to Account channel</button>
 	<button on:click={actions.unsubscribe()}>Unsubscribe from Account channel</button>
 </Realtime>
