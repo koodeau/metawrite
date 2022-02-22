@@ -10,7 +10,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.4.1](https://github.com/koodeau/metawrite/compare/v0.4.0...v0.4.1)
+
+- Fix: fixed Realtime props [`24443a1`](https://github.com/koodeau/metawrite/commit/24443a11970474d33ae66abe4e8c800f6ce3017a)
+- Fix: added payload directive in Realtime [`5369439`](https://github.com/koodeau/metawrite/commit/536943909db3970c0b70513c9342010f1822014e)
+
 #### [v0.4.0](https://github.com/koodeau/metawrite/compare/v0.3.4...v0.4.0)
+
+> 22 February 2022
 
 - New: Realtime component with new actions. See docs [`812fa1a`](https://github.com/koodeau/metawrite/commit/812fa1aab7e06919333e07b30a2ede9e2d60662c)
 - New: added custom Realtime endpoint option for Appwrite init [`b43447c`](https://github.com/koodeau/metawrite/commit/b43447c46b2450e4bfc311aad99957d5c565dfe7)
