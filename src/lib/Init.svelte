@@ -6,6 +6,7 @@
 	export let endpoint: string;
 	export let project: string;
 	export let locale = 'en';
+	export let realtime = endpoint;
 
 	onMount(() => {
 		if (endpoint == '') {
@@ -17,7 +18,7 @@
 			return;
 		}
 
-		Appwrite.setConfig({ endpoint, project, locale });
+		Appwrite.setConfig({ endpoint, project, locale, realtime });
 		active.set(true);
 	});
 </script>
