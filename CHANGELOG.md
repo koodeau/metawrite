@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.5.0](https://github.com/koodeau/metawrite/compare/v0.4.1...v0.5.0)
+
+- Breaking Change: fixed Collection query settings. Requres additional code changes if you used optional props [`52eb28c`](https://github.com/koodeau/metawrite/commit/52eb28c1593a76d93760204e2271921e2124beab)
+
 #### [v0.4.1](https://github.com/koodeau/metawrite/compare/v0.4.0...v0.4.1)
+
+> 22 February 2022
 
 - Fix: fixed Realtime props [`24443a1`](https://github.com/koodeau/metawrite/commit/24443a11970474d33ae66abe4e8c800f6ce3017a)
 - Fix: added payload directive in Realtime [`5369439`](https://github.com/koodeau/metawrite/commit/536943909db3970c0b70513c9342010f1822014e)
