@@ -17,10 +17,11 @@ export class DocumentsStore {
 	 * Get Documents in a Collection
 	 * @param {string} collectionId Collection Id
 	 * @param {boolean} cache Use cached response
-	 * @param {{ filters?: string[], limit?: number, offset?: number, orderField?: string, orderType?: string, orderCast?: string[], search?: string[] }} query Query paramters
+	 * @param {string[]} queries Use cached response
+	 * @param {{ limit?: number, offset?: number, cursor?: string, cursorDirection?: string, orderAttributes?: string[], orderTypes?: string[] }} query Query paramters
 	 * @returns {Promise<{documents: any[], sum: number}>}
 	 */
-	async fetchDocuments(collectionId, cache, query) {
+	async fetchDocuments(collectionId, cache, queries, query) {
 		if (cache) {
 			const docs = Array.from(get(this).entries())
 				.filter((entry) => entry[0].startsWith(collectionId))
@@ -36,13 +37,13 @@ export class DocumentsStore {
 
 		const response = await Appwrite.sdk.database.listDocuments(
 			collectionId,
-			query.filters,
+			queries,
 			query.limit,
 			query.offset,
-			query.orderField,
-			query.orderType,
-			query.orderCast,
-			query.search
+			query.cursor,
+			query.cursorDirection,
+			query.orderAttributes,
+			query.orderTypes
 		);
 
 		if (cache) {

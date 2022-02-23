@@ -1211,25 +1211,25 @@ The Database components allow you to create structured collections of documents,
 
 #### Arguments
 
-- collectionId - _required_ `@type - {string}`
+- collectionId - *required* `@type - {string}`
 
-- Cache - _optional_, by default set to false `@type - {boolean}`
+- Cache - *optional*, by default set to false `@type - {boolean}`
 
   **query: `@type - {object}`**
 
-- filters - _optional_ `@type - {string[]}`
+- queries - *optional* `@type - {string[]}`
 
-- offset - _optional_ `@type - {number}`
+- limit - *optional* `@type - {number}`
 
-- limit - _optional_ `@type - {number}`
+- offset - *optional* `@type - {number}`
 
-- orderField - _optional_ `@type - {string}`
+- cursor - *optional* `@type - {string}`
 
-- orderType - _optional_ `@type - {string}`
+- cursorDirection - *optional* `@type - {string}`
 
-- orderCast - _optional_ `@type - {string[]}`
+- orderAttributes - *optional* `@type - {string[]}`
 
-- search - _optional_ `@type - {string[]}`
+- orderTypes - *optional* `@type - {string[]}`
 
 #### Slots
 
@@ -1247,15 +1247,15 @@ The Database components allow you to create structured collections of documents,
 - **let:documents**
 - **let:error**
 
-#### Example
+#### Example 
 
 ```svelte
 <script>
-	import { Collection } from 'metawrite';
+  import { Collection } from "metawrite";
 </script>
 
 <Collection collectionId="5f56a3035a01f" let:documents>
-	You have {documents.length} documents.
+  You have {documents.length} documents.
 </Collection>
 ```
 

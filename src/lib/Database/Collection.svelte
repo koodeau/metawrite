@@ -21,14 +21,14 @@
 	export let collectionId;
 
 	/** @type {string[]} */
-	export let filters = [];
+	export let queries = [''];
 
-	export let offset = 0;
 	export let limit = 25;
-	export let orderField = '';
-	export let orderType = '';
-	export let orderCast = [];
-	export let search = [];
+	export let offset = 0;
+	export let cursor = '';
+	export let orderTypes = [];
+	export let orderAttributes = [];
+	export let cursorDirection = '';
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
@@ -38,14 +38,13 @@
 	setContext(cacheKey, cache);
 
 	const fetchDocuments = async () => {
-		return await documents.fetchDocuments(collectionId, cache, {
-			filters,
+		return await documents.fetchDocuments(collectionId, cache, queries, {
 			limit,
 			offset,
-			orderField,
-			orderType,
-			orderCast,
-			search
+			cursor,
+			cursorDirection,
+			orderAttributes,
+			orderTypes
 		});
 	};
 
@@ -96,19 +95,19 @@
 
   **query: `@type - {object}`**
 
-- filters - *optional* `@type - {string[]}`
-
-- offset - *optional* `@type - {number}`
+- queries - *optional* `@type - {string[]}`
 
 - limit - *optional* `@type - {number}`
 
-- orderField - *optional* `@type - {string}`
+- offset - *optional* `@type - {number}`
 
-- orderType - *optional* `@type - {string}`
+- cursor - *optional* `@type - {string}`
 
-- orderCast - *optional* `@type - {string[]}`
+- cursorDirection - *optional* `@type - {string}`
 
-- search - *optional* `@type - {string[]}`
+- orderAttributes - *optional* `@type - {string[]}`
+
+- orderTypes - *optional* `@type - {string[]}`
 
 #### Slots
 
