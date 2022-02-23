@@ -17,11 +17,16 @@ export class DocumentsStore {
 	 * Get Documents in a Collection
 	 * @param {string} collectionId Collection Id
 	 * @param {boolean} cache Use cached response
-	 * @param {string[]} queries Use cached response
-	 * @param {{ limit?: number, offset?: number, cursor?: string, cursorDirection?: string, orderAttributes?: string[], orderTypes?: string[] }} query Query paramters
+	 * @param {string[]} queries Array of query strings.
+	 * @param {number} limit Maximum number of documents to return in response. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+	 * @param {number} offset Offset value. The default value is 0. Use this value to manage pagination.
+	 * @param {string} cursor ID of the document used as the starting point for the query, excluding the document itself. Should be used for efficient pagination when working with large sets of data. 
+	 * @param {string} cursorDirection Direction of the cursor.
+	 * @param {string[]} orderAttributes Array of attributes used to sort results.
+	 * @param {string[]} orderTypes Array of order directions for sorting attribtues. Possible values are DESC for descending order, or ASC for ascending order.
 	 * @returns {Promise<{documents: any[], sum: number}>}
 	 */
-	async fetchDocuments(collectionId, cache, queries, query) {
+	async fetchDocuments(collectionId, cache, queries, limit, offset, cursor, cursorDirection, orderAttributes, orderTypes) {
 		if (cache) {
 			const docs = Array.from(get(this).entries())
 				.filter((entry) => entry[0].startsWith(collectionId))
@@ -38,12 +43,12 @@ export class DocumentsStore {
 		const response = await Appwrite.sdk.database.listDocuments(
 			collectionId,
 			queries,
-			query.limit,
-			query.offset,
-			query.cursor,
-			query.cursorDirection,
-			query.orderAttributes,
-			query.orderTypes
+			limit,
+			offset,
+			cursor,
+			cursorDirection,
+			orderAttributes,
+			orderTypes
 		);
 
 		if (cache) {

@@ -26,9 +26,9 @@
 	export let limit = 25;
 	export let offset = 0;
 	export let cursor = '';
-	export let orderTypes = [];
-	export let orderAttributes = [];
 	export let cursorDirection = '';
+	export let orderAttributes = [''];
+	export let orderTypes = [''];
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
@@ -38,14 +38,17 @@
 	setContext(cacheKey, cache);
 
 	const fetchDocuments = async () => {
-		return await documents.fetchDocuments(collectionId, cache, queries, {
+		return await documents.fetchDocuments(
+			collectionId,
+			cache,
+			queries,
 			limit,
 			offset,
 			cursor,
 			cursorDirection,
 			orderAttributes,
 			orderTypes
-		});
+		);
 	};
 
 	const actions = {
@@ -91,7 +94,7 @@
 
 - collectionId - *required* `@type - {string}`
 
-- Cache - *optional*, by default set to false `@type - {boolean}`
+- cache - *optional*, by default set to false `@type - {boolean}`
 
   **query: `@type - {object}`**
 

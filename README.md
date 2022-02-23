@@ -1213,7 +1213,7 @@ The Database components allow you to create structured collections of documents,
 
 - collectionId - *required* `@type - {string}`
 
-- Cache - *optional*, by default set to false `@type - {boolean}`
+- cache - *optional*, by default set to false `@type - {boolean}`
 
   **query: `@type - {object}`**
 
