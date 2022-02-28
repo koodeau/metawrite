@@ -20,14 +20,52 @@
 	 */
 	export let collectionId;
 
-	/** @type {string[]} */
-	export let queries = [''];
+	/**
+	 * @name Queries 
+	 * @type {string[]}
+	 * Array of query strings.
+	 */
+	export let queries;
 
-	export let limit = 25;
-	export let offset = 0;
-	export let cursor = '';
-	export let cursorDirection = '';
-	export let orderAttributes = [''];
+	/**
+	 * @name Limit
+	 * @type {number}
+	 * Maximum number of documents to return in response. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+	 */
+	export let limit;
+
+	/**
+	 * @name offset
+	 * @type {number}
+	 * Default: 0
+	 */
+	export let offset;
+
+	/**
+	 * @name Cursor
+	 * @type {string}
+	 * ID of the document used as the starting point for the query, excluding the document itself. 
+	 */
+	export let cursor;
+
+	/**
+	 * @name cursorDirection
+	 * @type {string}
+	 */
+	export let cursorDirection;
+
+	/**
+	 * @name orderAttributes
+	 * @type {string[]}
+	 * Array of attributes used to sort results.
+	 */
+	export let orderAttributes;
+
+	/**
+	 * @name orderTypes
+	 * @type {string[]}
+	 * Array of order directions for sorting attribtues. Possible values are DESC for descending order, or ASC for ascending order.
+	 */
 	export let orderTypes = ['ASC'];
 
 	/**
