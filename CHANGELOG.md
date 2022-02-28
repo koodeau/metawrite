@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.5.3](https://github.com/koodeau/metawrite/compare/v0.5.2...v0.5.3)
+
+- WIP: Collection component fix [`f72b887`](https://github.com/koodeau/metawrite/commit/f72b887b4b5ac339491e38d0207e38d4235f6143)
+
 #### [v0.5.2](https://github.com/koodeau/metawrite/compare/v0.5.1...v0.5.2)
+
+> 28 February 2022
 
 - add orderTypes prop to Collection component [`b9b73fc`](https://github.com/koodeau/metawrite/commit/b9b73fcff18952674bb5e6fc45e619a105bc04d3)
 
