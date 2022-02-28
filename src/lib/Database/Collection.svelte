@@ -28,7 +28,7 @@
 	export let cursor = '';
 	export let cursorDirection = '';
 	export let orderAttributes = [''];
-	export let orderTypes = [''];
+	export let orderTypes = ['ASC'];
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
