@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.6.2](https://github.com/koodeau/metawrite/compare/v0.6.1...v0.6.2)
+
+- Fixed: tsconfig caused error bulding package [`f7f68d3`](https://github.com/koodeau/metawrite/commit/f7f68d381826af7214e227177145c192e5d062b9)
+
 #### [v0.6.1](https://github.com/koodeau/metawrite/compare/v0.6.0...v0.6.1)
+
+> 9 March 2022
 
 - Fixed: removed unnecessary props from required in Collection component [`2e20214`](https://github.com/koodeau/metawrite/commit/2e2021459ab20ca7f2dcc89cdb3a2ac5c5461723)
 - Fixed: typings for Document component [`6c4a2bf`](https://github.com/koodeau/metawrite/commit/6c4a2bf6a32ca57ef38eefd063723eeca7339d37)
