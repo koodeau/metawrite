@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.6.0](https://github.com/koodeau/metawrite/compare/v0.5.3...v0.6.0)
+
+- added support of sdk v7 and server v0.13 Breaking Change [`5b52049`](https://github.com/koodeau/metawrite/commit/5b52049fd6a8da141f846a84f208316eb8a62120)
+
 #### [v0.5.3](https://github.com/koodeau/metawrite/compare/v0.5.2...v0.5.3)
+
+> 28 February 2022
 
 - WIP: Collection component fix [`f72b887`](https://github.com/koodeau/metawrite/commit/f72b887b4b5ac339491e38d0207e38d4235f6143)
 
