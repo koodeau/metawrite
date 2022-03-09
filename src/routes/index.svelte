@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Appwrite, User, MagicURL } from '$lib';
+	import { Appwrite, User, MagicURL, FileList, Storage } from '$lib';
 
 	// const collectionId: string = 'faqs';
 	const config = {
 		endpoint: 'http://localhost/v1',
-		project: 'demo'
+		project: 'metawrite'
 	};
 
 	const successCreate = (e) => {
@@ -43,10 +43,19 @@
 
 	<MagicURL let:actions on:successCreate on:successComplete on:failureCreate on:failureComplete>
 		<input type="email" name="email" placeholder="Email" bind:value={email} />
-		<button on:click={actions.create("someuserid", email, "http://localhost:3000/")}>Send login link</button>
-		<button on:click={actions.complete()}>Confirm Login</button>
+		<button on:click={() => actions.create("someuserid", email, "http://localhost:3000/")}>Send login link</button>
+		<button on:click={() => actions.complete()}>Confirm Login</button>
 	</MagicURL>
 	<User let:user>
 		<h1>User ID: {user.$id}</h1>
+
+		<FileList bucketId="default" let:files>
+			{#each files as file}
+				<p>{file.$id}</p>
+			{/each}
+		</FileList>
+		<Storage let:actions>
+
+		</Storage>
 	</User>
 </Appwrite>

@@ -1353,27 +1353,26 @@ The Storage components allow you to manage your project files. You can upload, v
 **let:actions**
 | Name | Description |
 | --- | --- |
-| `create(fileId, file, read, write)` | Uploads a file. <br />`fileId` is required `@type - {string}`, `"unique()"` will generate random unique id, but you can use custom.<br />`file` is `@type - {File}` and required.<br />`read`/`write` is `@type - {string[]}` and _optional_ |
-
-- **let:files**
+| `create(bucketId, fileId, file, read, write)` | Uploads a file. <br />`fileId` is required `@type - {string}`, `"unique()"` will generate random unique id, but you can use custom.<br />`file` is `@type - {File}` and required.<br />`read`/`write` is `@type - {string[]}` and *optional* |
 
 #### Example
 
 ```svelte
-<script>
-	import { Storage } from 'metawrite';
+<script lang="ts">
+    import { Storage } from "metawrite"
 
-	// Required
-	/**@type {File}*/ let file;
-	/**@type {string}*/ let fileId = 'unique()'; // this will generate random unique id, but you can use custom
+    // Required
+	let bucketId = "default"
+    let file: File;
+    let fileId = "unique()"; // this will generate random unique id, but you can use custom
 
-	// Optional
-	/**@type {string[]}*/ let read;
-	/**@type {string[]}*/ let write;
+    // Optional
+    let read: string[];
+    let write: string[];
 </script>
 
 <Storage {file} let:actions>
-	<button on:click={actions.create(fileId, file, read, write)}>Upload File</button>
+    <button on:click={actions.create(bucketId, fileId, file, read, write)}>Upload File</button>
 </Storage>
 ```
 
@@ -1381,10 +1380,13 @@ The Storage components allow you to manage your project files. You can upload, v
 
 #### Arguments
 
-- search - _optional_ `@type - {string}`
-- limit - _optional_ `@type - {number}`
-- offset - _optional_ `@type - {number}`
-- orderType - _optional_ `@type - {string} ` => write `"ASC"` or `"DESC"`
+- bucketId - *required* `@type - {string}`
+- search - *optional* `@type - {string}`
+- limit - *optional* `@type - {number}`
+- offset - *optional* `@type - {number}`
+- cursor - *optional* `@type - {string}`
+- cursorDirection - *optional* `@type - {string}`
+- orderType - *optional* `@type - {string} ` => write  `"ASC"` or `"DESC"`
 
 #### Slots
 
@@ -1401,24 +1403,25 @@ The Storage components allow you to manage your project files. You can upload, v
 - **let:files**
 - **let:error**
 
-#### Example
+#### Example 
 
 ```svelte
 <script>
-	import { FileList } from 'metawrite';
+    import { FileList } from "metawrite"
 
-	// Optional
-	let search = '';
-	let limit = 10;
-	let offset = 0;
-	let orderType = 'ASC';
+    // Optional
+    let bucketId = 'default';
+    let search = '';
+    let limit = 10;
+    let offset = 0;
+    let orderType = 'ASC';
 </script>
 
-<FileList {search} {limit} {offset} {orderType} let:actions let:files>
-	{#each files as file}
-		<p>File: {file.name}</p>
-	{/each}
-	<button on:click={actions.reload()}>Reload</button>
+<FileList {bucketId} {search} {limit} {offset} {orderType}let:actions let:files>
+    {#each files as file}
+        <p>File: {file.name}</p>
+    {/each}
+    <button on:click={actions.reload()}>Reload</button>
 </FileList>
 ```
 

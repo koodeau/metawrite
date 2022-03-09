@@ -54,7 +54,7 @@
 
 <Currencies let:actions let:currencies>
     <button on:click={actions.reload()}>Reload</button>
-    <p>There are {currencies.sum} currencies:</p>
+    <p>There are {currencies.total} currencies:</p>
     {#each currencies.currencies as currency}
         <p>{currency.symbol} - {currency.name} ({currency.code})</p>
     {/each}

@@ -24,7 +24,7 @@ export class DocumentsStore {
 	 * @param {string} cursorDirection Direction of the cursor.
 	 * @param {string[]} orderAttributes Array of attributes used to sort results.
 	 * @param {string[]} orderTypes Array of order directions for sorting attribtues. Possible values are DESC for descending order, or ASC for ascending order.
-	 * @returns {Promise<{documents: any[], sum: number}>}
+	 * @returns {Promise<{documents: any[], total: number}>}
 	 */
 	async fetchDocuments(collectionId, cache, queries, limit, offset, cursor, cursorDirection, orderAttributes, orderTypes) {
 		if (cache) {
@@ -35,7 +35,7 @@ export class DocumentsStore {
 			if (docs?.length) {
 				return {
 					documents: docs,
-					sum: docs.length
+					total: docs.length
 				};
 			}
 		}

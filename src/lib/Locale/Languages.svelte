@@ -54,7 +54,7 @@
 
 <Languages let:actions let:languages>
 	<button on:click={actions.reload()}>Reload</button>
-	<p>There are {languages.sum} languages:</p>
+	<p>There are {languages.total} languages:</p>
 	{#each languages.languages as language}
 		<p>{language.name}, {language.code}></p>
     {/each}

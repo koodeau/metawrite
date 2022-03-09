@@ -15,12 +15,13 @@
 
 	export let file: {
 		$id: string;
+		bucketId: string;
 		$permissions: { read?: string[] | ['']; write?: string[] | [''] };
 	};
 
 	const actions = {
-		download: () => Appwrite.sdk.storage.getFileDownload(file.$id),
-		view: () => Appwrite.sdk.storage.getFileView(file.$id),
+		download: () => Appwrite.sdk.storage.getFileDownload(file.bucketId, file.$id),
+		view: () => Appwrite.sdk.storage.getFileView(file.bucketId, file.$id),
 		preview: (
 			width?: number,
 			height?: number,
@@ -35,6 +36,7 @@
 			output?: string
 		) =>
 			Appwrite.sdk.storage.getFilePreview(
+				file.bucketId,
 				file.$id,
 				width,
 				height,
@@ -49,8 +51,8 @@
 				output
 			),
 		update: async (read = file.$permissions.read, write = file.$permissions.write) =>
-			await Appwrite.sdk.storage.updateFile(file.$id, read, write),
-		delete: async () => await Appwrite.sdk.storage.deleteFile(file.$id)
+			await Appwrite.sdk.storage.updateFile(file.bucketId, file.$id, read, write),
+		delete: async () => await Appwrite.sdk.storage.deleteFile(file.bucketId, file.$id)
 	};
 </script>
 
