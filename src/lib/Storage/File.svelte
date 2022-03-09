@@ -16,7 +16,8 @@
 	export let file: {
 		$id: string;
 		bucketId: string;
-		$permissions: { read?: string[] | ['']; write?: string[] | [''] };
+		$permissions: { read?: string[]; write?: string[] };
+		[key: any]: any;
 	};
 
 	const actions = {

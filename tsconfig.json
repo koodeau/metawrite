@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
 		"moduleResolution": "node",
-		"module": "es2020",
-		"lib": ["es2020", "DOM"],
+		"module": "esnext",
+		"lib": ["ES2020", "ESNext", "DOM", "ESNext.Array"],
 		"target": "es2019",
 		"types": [ "svelte" ],
 		// "allowSyntheticDefaultImports": true,
@@ -28,6 +28,7 @@
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
 		"baseUrl": ".",
 		"allowJs": true,
 		"checkJs": true,

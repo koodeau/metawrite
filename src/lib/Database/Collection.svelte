@@ -22,44 +22,52 @@
 
 	/**
 	 * @name Queries 
+	 * @type {string[]}
 	 * Array of query strings.
 	 */
-	export let queries = [""];
+	export let queries: string[] = [];
 
 	/**
 	 * @name Limit
+	 * @type {number}
 	 * Maximum number of documents to return in response. By default will return maximum 25 results. Maximum of 100 results allowed per request.
 	 */
-	export let limit = 25;
+	export let limit: number = 25;
 
 	/**
 	 * @name offset
+	 * @type {number}
 	 * Default: 0
 	 */
-	export let offset = 0;
+	export let offset: number = 0;
 
 	/**
 	 * @name Cursor
+	 * @type {string}
 	 * ID of the document used as the starting point for the query, excluding the document itself. 
 	 */
-	export let cursor = '';
+	export let cursor: string = '';
 
 	/**
 	 * @name cursorDirection
+	 * @type {string}
 	 */
-	export let cursorDirection = '';
+	export let cursorDirection: string = '';
 
 	/**
 	 * @name orderAttributes
+	 * @type {string[]}
 	 * Array of attributes used to sort results.
 	 */
-	export let orderAttributes = [""];
+	export let orderAttributes: string[] = [];
 
 	/**
 	 * @name orderTypes
+	 * @type {string[]}
+	 * ASC or DESC
 	 * Array of order directions for sorting attribtues. Possible values are DESC for descending order, or ASC for ascending order.
 	 */
-	export let orderTypes = ['ASC'];
+	export let orderTypes: string[] = [];
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
@@ -90,7 +98,7 @@
 			documentId = 'unique()',
 			data = {},
 			read = [`user:${$currentUser.$id}`],
-			 write = [`user:${$currentUser.$id}`]
+			write = [`user:${$currentUser.$id}`]
 		) => {
 			const response = await Appwrite.sdk.database.createDocument(
 				collectionId,

@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { Appwrite, User, MagicURL, FileList, Storage } from '$lib';
+	import { Appwrite, User, MagicURL, FileList, Collection } from '$lib';
 
-	// const collectionId: string = 'faqs';
 	const config = {
 		endpoint: 'http://localhost/v1',
 		project: 'metawrite'
@@ -21,6 +20,8 @@
 	}
 
 	let email: string;
+	let title = '';
+	let description = '';
 </script>
 
 <Appwrite {...config}>
@@ -29,33 +30,33 @@
 		Visit <a href="https://github.com/koodeau/metawrite#readme">Github repository</a> to read the documentation
 	</p>
 
-	<h1>Using Metawrite with {`<MagicURL />`}</h1>
-
-	<!-- <Collection {collectionId} let:documents>
+	<Collection collectionId="demo" let:actions let:documents>
+		<h1>Create Note</h1>
+		<input type="text" name="title" bind:value={title} placeholder="Title" />
+		<textarea type="text" name="description" bind:value={description} placeholder="Desctiption" />
+		<button on:click={() => actions.create("unique()", { title, description }, ["role:all"], ["role:all"])}>Create</button>
 		{#if documents}
-			<h1>FAQs</h1>
-			{#each documents as faq}
-				<h2>{faq.question}</h2>
-				<p>{faq.answer}</p>
+			<h1>Notes</h1>
+			{#each documents as note}
+				<h2>{note.title}</h2>
+				<p>{note.description}</p>
 			{/each}
 		{/if}
-	</Collection> -->
-
-	<MagicURL let:actions on:successCreate on:successComplete on:failureCreate on:failureComplete>
-		<input type="email" name="email" placeholder="Email" bind:value={email} />
-		<button on:click={() => actions.create("someuserid", email, "http://localhost:3000/")}>Send login link</button>
-		<button on:click={() => actions.complete()}>Confirm Login</button>
-	</MagicURL>
+	</Collection>
 	<User let:user>
 		<h1>User ID: {user.$id}</h1>
 
-		<FileList bucketId="default" let:files>
-			{#each files as file}
-				<p>{file.$id}</p>
-			{/each}
-		</FileList>
-		<Storage let:actions>
-
-		</Storage>
+		<h1>Using Metawrite with {`<MagicURL />`}</h1>
+		<MagicURL let:actions on:successCreate on:successComplete on:failureCreate on:failureComplete>
+			<input type="email" name="email" placeholder="Email" bind:value={email} />
+			<button on:click={() => actions.create("someuserid", email, "http://localhost:3000/")}>Send login link</button>
+			<button on:click={() => actions.complete()}>Confirm Login</button>
+		</MagicURL>
 	</User>
+
+	<FileList bucketId="default" let:files>
+		{#each files as file}
+			<p>{file.$id}</p>
+		{/each}
+	</FileList>
 </Appwrite>
