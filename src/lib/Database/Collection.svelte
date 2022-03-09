@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @slot {{
 	 * documents: any[];
@@ -18,59 +18,51 @@
 	 * @name Collection ID
 	 * @type {string}
 	 */
-	export let collectionId;
+	export let collectionId: string;
 
 	/**
 	 * @name Queries 
-	 * @type {string[]}
 	 * Array of query strings.
 	 */
-	export let queries;
+	export let queries = [""];
 
 	/**
 	 * @name Limit
-	 * @type {number}
 	 * Maximum number of documents to return in response. By default will return maximum 25 results. Maximum of 100 results allowed per request.
 	 */
-	export let limit;
+	export let limit = 25;
 
 	/**
 	 * @name offset
-	 * @type {number}
 	 * Default: 0
 	 */
-	export let offset;
+	export let offset = 0;
 
 	/**
 	 * @name Cursor
-	 * @type {string}
 	 * ID of the document used as the starting point for the query, excluding the document itself. 
 	 */
-	export let cursor;
+	export let cursor = '';
 
 	/**
 	 * @name cursorDirection
-	 * @type {string}
 	 */
-	export let cursorDirection;
+	export let cursorDirection = '';
 
 	/**
 	 * @name orderAttributes
-	 * @type {string[]}
 	 * Array of attributes used to sort results.
 	 */
-	export let orderAttributes;
+	export let orderAttributes = [""];
 
 	/**
 	 * @name orderTypes
-	 * @type {string[]}
 	 * Array of order directions for sorting attribtues. Possible values are DESC for descending order, or ASC for ascending order.
 	 */
 	export let orderTypes = ['ASC'];
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
-	 * @type {boolean}
 	 */
 	export let cache = false;
 	setContext(cacheKey, cache);
@@ -95,10 +87,10 @@
 			getDocuments = fetchDocuments();
 		},
 		create: async (
-			/**@type {string}*/ documentId = 'unique()',
-			/**@type {object}*/ data = {},
-			/**@type {string[]}*/ read = [`user:${$currentUser.$id}`],
-			/**@type {string[]}*/ write = [`user:${$currentUser.$id}`]
+			documentId = 'unique()',
+			data = {},
+			read = [`user:${$currentUser.$id}`],
+			 write = [`user:${$currentUser.$id}`]
 		) => {
 			const response = await Appwrite.sdk.database.createDocument(
 				collectionId,
