@@ -36,7 +36,7 @@
 			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"extends": "./.svelte-kit/tsconfig.json",
+	// "extends": "./.svelte-kit/tsconfig.json",
 	"include": ["src/lib/*.d.ts", "src/lib/**/*.d.ts", "src/lib/**/*.js", "src/lib/*.js", "src/lib/**/*.ts", "src/lib/*.ts", "src/lib/**/*.svelte", "src/lib/*.svelte"], // "package"
 	"exclude": ["examples/**/*.d.ts", "examples/**/*.js", "examples/**/*.ts", "examples/**/*.svelte"]
 }
