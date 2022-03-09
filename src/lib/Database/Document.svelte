@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @slot {{
 	 * document: any;
@@ -20,25 +20,25 @@
 	 * @name Document ID
 	 * @type {string}
 	 */
-	export let documentId;
+	export let documentId: string;
 
 	/**
 	 * @name Collection ID
 	 * @type {string}
 	 */
-	export let collectionId;
+	export let collectionId: string;
 
 	/**
 	 * @name Document Object
 	 * @type {any}
 	 */
-	export let document;
+	export let document: any;
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
 	 * @type {boolean}
 	 */
-	export let cache = getContext(cacheKey) ?? false;
+	export let cache: boolean = getContext(cacheKey) ?? false;
 
 	const fetchDocument = async () => {
 		const response = await documents.fetchDocument(collectionId, documentId, cache);
@@ -58,7 +58,7 @@
 			documents.clear();
 			document = fetchDocument();
 		},
-		update: async (/** @type {object} */ data) => {
+		update: async (/** @type {object} */ data: object) => {
 			const response = await Appwrite.sdk.database.updateDocument(
 				document.$collection,
 				document.$id,
