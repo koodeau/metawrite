@@ -10,7 +10,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.6.1](https://github.com/koodeau/metawrite/compare/v0.6.0...v0.6.1)
+
+- Fixed: removed unnecessary props from required in Collection component [`2e20214`](https://github.com/koodeau/metawrite/commit/2e2021459ab20ca7f2dcc89cdb3a2ac5c5461723)
+- Fixed: typings for Document component [`6c4a2bf`](https://github.com/koodeau/metawrite/commit/6c4a2bf6a32ca57ef38eefd063723eeca7339d37)
+
 #### [v0.6.0](https://github.com/koodeau/metawrite/compare/v0.5.3...v0.6.0)
+
+> 9 March 2022
 
 - added support of sdk v7 and server v0.13 Breaking Change [`5b52049`](https://github.com/koodeau/metawrite/commit/5b52049fd6a8da141f846a84f208316eb8a62120)
 
