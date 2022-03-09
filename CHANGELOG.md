@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.6.3](https://github.com/koodeau/metawrite/compare/v0.6.2...v0.6.3)
+
+- Fixed: Collection and File components API errors resolved and improved typings. Improved svelte stores [`a388bc5`](https://github.com/koodeau/metawrite/commit/a388bc5431dc7d2004207a7f7d197ba49f47e74b)
+
 #### [v0.6.2](https://github.com/koodeau/metawrite/compare/v0.6.1...v0.6.2)
+
+> 9 March 2022
 
 - Fixed: tsconfig caused error bulding package [`f7f68d3`](https://github.com/koodeau/metawrite/commit/f7f68d381826af7214e227177145c192e5d062b9)
 
