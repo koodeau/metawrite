@@ -10,7 +10,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.7.0](https://github.com/koodeau/metawrite/compare/v0.6.3...v0.7.0)
+
+- Breaking Change: changed File component behaviour and fixes [`0ae47b1`](https://github.com/koodeau/metawrite/commit/0ae47b1bb6aa7d6049a013fc5c990b07dc6ead92)
+- Fixed replaced userId with sessionId parameter on MagicURL [`ad0714b`](https://github.com/koodeau/metawrite/commit/ad0714bf642581f8209a4125ab97643ecda4476b)
+
 #### [v0.6.3](https://github.com/koodeau/metawrite/compare/v0.6.2...v0.6.3)
+
+> 9 March 2022
 
 - Fixed: Collection and File components API errors resolved and improved typings. Improved svelte stores [`a388bc5`](https://github.com/koodeau/metawrite/commit/a388bc5431dc7d2004207a7f7d197ba49f47e74b)
 
