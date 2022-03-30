@@ -1,7 +1,8 @@
 <script lang="ts">
 	/**
 	 * @slot {{
-	 * file: any;
+	 * bucketId: string;
+	 * fileId: string;
 	 * actions: {
 	 *  download: () => URL;
 	 *  view: () => URL;
@@ -13,16 +14,12 @@
 	 */
 	import { SDK as Appwrite } from '../_appwrite';
 
-	export let file: {
-		$id: string;
-		bucketId: string;
-		$permissions: { read?: string[]; write?: string[] };
-		[key: any]: any;
-	};
+	export let bucketId: string;
+	export let fileId: string;
 
 	const actions = {
-		download: () => Appwrite.sdk.storage.getFileDownload(file.bucketId, file.$id),
-		view: () => Appwrite.sdk.storage.getFileView(file.bucketId, file.$id),
+		download: () => Appwrite.sdk.storage.getFileDownload(bucketId, fileId),
+		view: () => Appwrite.sdk.storage.getFileView(bucketId, fileId),
 		preview: (
 			width?: number,
 			height?: number,
@@ -37,8 +34,8 @@
 			output?: string
 		) =>
 			Appwrite.sdk.storage.getFilePreview(
-				file.bucketId,
-				file.$id,
+				bucketId,
+				fileId,
 				width,
 				height,
 				gravity,
@@ -51,9 +48,9 @@
 				background,
 				output
 			),
-		update: async (read = file.$permissions.read, write = file.$permissions.write) =>
-			await Appwrite.sdk.storage.updateFile(file.bucketId, file.$id, read, write),
-		delete: async () => await Appwrite.sdk.storage.deleteFile(file.bucketId, file.$id)
+		update: async (read?: string[], write?: string[]) =>
+			await Appwrite.sdk.storage.updateFile(bucketId, fileId, read, write),
+		delete: async () => await Appwrite.sdk.storage.deleteFile(bucketId, fileId)
 	};
 </script>
 
@@ -66,7 +63,8 @@
 
 #### Arguments
 
-- file - it is fileId `@type - {string}`
+- bucketId - it is your Bucket ID `@type - {string}`
+- fileId - it is File ID `@type - {string}`
 
 #### Directives
 
@@ -74,7 +72,7 @@
 | Name | Description |
 | --- | --- |
 | `download()` | Downloads file. |
-| `view(as)` | Get file for View. |
+| `view()` | Get file for View. |
 | `preview(width, height, quality, background, output)` | Get file for preview. |
 | `update(read, write)` | Updates a file. |
 | `delete()` | Deletes a file. |
@@ -82,11 +80,12 @@
 #### Example 
 
 ```svelte
-<script>
+<script lang="ts">
 	import { File } from 'metawrite';
 
 	// Required
-	/**@type {File}*/ let file;
+	let bucketId: string;
+	let fileId: string;
 
 	// OPTIONAL
 	/** @type {number} */ let width;
@@ -104,7 +103,7 @@
 	/** @type {string[]} */ let write;
 </script>
 
-<File {file} let:actions>
+<File {bucketId} {fileId} let:actions>
 	<button on:click={actions.download()}>Download File</button>
 	<button on:click={actions.view()}>File View</button>
 	<button on:click={actions.preview()}>Preview File</button>

@@ -1002,25 +1002,21 @@ Creates JWT token.
 
 ### `<MagicURL />`
 
-Creates Magic URL Session and stores session information.
-
 #### Directives
 
 **let:actions**
 
-| Name       | Description                |
-| ---------- | -------------------------- |
-| `create(email, url)` | Creates Magic URL Session. email is required, url is to point on complete step `string` |
-| `complete()` | Automatically validates url info and completes Magic URL Session. |
+| Name                        | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `create(sessionId, email, url)` | Creates Magic URL Session. email is required, url is to point on complete step `string`, `sessionId` is not required |
+| `complete()` | Validates and completes Magic URL Session. |
 
-#### Example
+#### Example 
 
 ```svelte
 <script>
-<script>
     import { MagicURL } from "metawrite";
 
-    const userId = "32h2hj24h2"
     let email = ""
     const url = "http://localhost:3000/page-to-complete"
 
@@ -1040,7 +1036,7 @@ Creates Magic URL Session and stores session information.
 
 <MagicURL let:actions on:successCreate on:successComplete on:failureCreate on:failureComplete>
 		<input type="email" name="email" placeholder="Email" bind:value={email} />
-		<button on:click={actions.create(userId, email, url)}>Send login link</button>
+		<button on:click={actions.create(email, url)}>Send login link</button>
 		<button on:click={actions.complete()}>Confirm Login</button>
 </MagicURL>
 ```
@@ -1429,7 +1425,8 @@ The Storage components allow you to manage your project files. You can upload, v
 
 #### Arguments
 
-- file - it is fileId `@type - {string}`
+- bucketId - it is your Bucket ID `@type - {string}`
+- fileId - it is File ID `@type - {string}`
 
 #### Directives
 
@@ -1437,19 +1434,20 @@ The Storage components allow you to manage your project files. You can upload, v
 | Name | Description |
 | --- | --- |
 | `download()` | Downloads file. |
-| `view(as)` | Get file for View. |
+| `view()` | Get file for View. |
 | `preview(width, height, quality, background, output)` | Get file for preview. |
 | `update(read, write)` | Updates a file. |
 | `delete()` | Deletes a file. |
 
-#### Example
+#### Example 
 
 ```svelte
-<script>
+<script lang="ts">
 	import { File } from 'metawrite';
 
 	// Required
-	/**@type {File}*/ let file;
+	let bucketId: string;
+	let fileId: string;
 
 	// OPTIONAL
 	/** @type {number} */ let width;
@@ -1467,7 +1465,7 @@ The Storage components allow you to manage your project files. You can upload, v
 	/** @type {string[]} */ let write;
 </script>
 
-<File {file} let:actions>
+<File {bucketId} {fileId} let:actions>
 	<button on:click={actions.download()}>Download File</button>
 	<button on:click={actions.view()}>File View</button>
 	<button on:click={actions.preview()}>Preview File</button>
