@@ -20,12 +20,12 @@
 	const dispatch = createEventDispatcher();
 	const actions = {
 		create: async (
-			/** @type {string} */ userId = 'unique()',
+			/** @type {string} */ sessionId = 'unique()',
 			/** @type {string} */ email,
 			/** @type {string} */ url
 		) => {
 			try {
-				const response = await Appwrite.sdk.account.createMagicURLSession(userId, email, url);
+				const response = await Appwrite.sdk.account.createMagicURLSession(sessionId, email, url);
 				dispatch('successCreate', response);
 				currentUser.reload();
 				return response;
@@ -63,7 +63,7 @@ Creates Magic URL Session.
 
 | Name                        | Description                                                  |
 | --------------------------- | ------------------------------------------------------------ |
-| `create(email, url)` | Creates Magic URL Session. email is required, url is to point on complete step `string` |
+| `create(sessionId, email, url)` | Creates Magic URL Session. email is required, url is to point on complete step `string`, `sessionId` is not required |
 | `complete()` | Validates and completes Magic URL Session. |
 
 #### Example 
@@ -72,7 +72,6 @@ Creates Magic URL Session.
 <script>
     import { MagicURL } from "metawrite";
 
-    const userId = "32h2hj24h2"
     let email = ""
     const url = "http://localhost:3000/page-to-complete"
 
@@ -92,7 +91,7 @@ Creates Magic URL Session.
 
 <MagicURL let:actions on:successCreate on:successComplete on:failureCreate on:failureComplete>
 		<input type="email" name="email" placeholder="Email" bind:value={email} />
-		<button on:click={actions.create(userId, email, url)}>Send login link</button>
+		<button on:click={actions.create(email, url)}>Send login link</button>
 		<button on:click={actions.complete()}>Confirm Login</button>
 </MagicURL>
 ```
