@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.7.1](https://github.com/koodeau/metawrite/compare/v0.7.0...v0.7.1)
+
+- Fix: updated permission variables to a never object version [`bda881c`](https://github.com/koodeau/metawrite/commit/bda881c53669f526d16db583a611596679a6961f)
+
 #### [v0.7.0](https://github.com/koodeau/metawrite/compare/v0.6.3...v0.7.0)
+
+> 30 March 2022
 
 - Breaking Change: changed File component behaviour and fixes [`0ae47b1`](https://github.com/koodeau/metawrite/commit/0ae47b1bb6aa7d6049a013fc5c990b07dc6ead92)
 - Fixed replaced userId with sessionId parameter on MagicURL [`ad0714b`](https://github.com/koodeau/metawrite/commit/ad0714bf642581f8209a4125ab97643ecda4476b)
