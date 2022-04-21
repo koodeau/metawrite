@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.7.3](https://github.com/koodeau/metawrite/compare/v0.7.2...v0.7.3)
+
+- Fix: type defs and documentation fixed for Document component [`4e8640f`](https://github.com/koodeau/metawrite/commit/4e8640f5e1607a4905b01f02a798b088ba5558d1)
+
 #### [v0.7.2](https://github.com/koodeau/metawrite/compare/v0.7.1...v0.7.2)
+
+> 21 April 2022
 
 - Fix: Document component bug regarding receiving document as argument instead of returning as directive [`284de6f`](https://github.com/koodeau/metawrite/commit/284de6f716c4399b09b09914eea61662d3d4f557)
 
