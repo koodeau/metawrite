@@ -32,7 +32,7 @@
 	 * @name Document Object
 	 * @type {any}
 	 */
-	export let document: any;
+	let document: any;
 
 	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
