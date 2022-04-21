@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.7.2](https://github.com/koodeau/metawrite/compare/v0.7.1...v0.7.2)
+
+- Fix: Document component bug regarding receiving document as argument instead of returning as directive [`284de6f`](https://github.com/koodeau/metawrite/commit/284de6f716c4399b09b09914eea61662d3d4f557)
+
 #### [v0.7.1](https://github.com/koodeau/metawrite/compare/v0.7.0...v0.7.1)
+
+> 31 March 2022
 
 - Fix: updated permission variables to a never object version [`bda881c`](https://github.com/koodeau/metawrite/commit/bda881c53669f526d16db583a611596679a6961f)
 
