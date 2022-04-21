@@ -29,16 +29,12 @@
 	export let collectionId: string;
 
 	/**
-	 * @name Document Object
-	 * @type {any}
-	 */
-	let document: any;
-
-	/**
 	 * @description Enables document caching. Call `actions.reload()` to get fresh document(s)
 	 * @type {boolean}
 	 */
 	export let cache: boolean = getContext(cacheKey) ?? false;
+
+	let document: any;
 
 	const fetchDocument = async () => {
 		const response = await documents.fetchDocument(collectionId, documentId, cache);
@@ -103,7 +99,6 @@
 
 - documentId - *required* `@type - {string}`
 - collectionId - *required* `@type - {string}`
-- document - `Promise<any>`
 
 #### Slots
 
@@ -134,9 +129,10 @@
 <Collection {collectionId} let:documents>
 	You have {documents.length} documents:
 	{#each documents as document}
-		<Document {collectionId} documentId={document.$id} {document}>
+		<Document {collectionId} documentId={document.$id} let:document let:actions>
 			Title: {document.title}
 			Text: {document.text}
+			<button on:click={() => {actions.remove()}}>Delete</button>
 		</Document>
 	{/each}
 </Collection>

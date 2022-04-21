@@ -1259,9 +1259,8 @@ The Database components allow you to create structured collections of documents,
 
 #### Arguments
 
-- documentId - _required_ `@type - {string}`
-- collectionId - _required_ `@type - {string}`
-- document - `Promise<any>`
+- documentId - *required* `@type - {string}`
+- collectionId - *required* `@type - {string}`
 
 #### Slots
 
@@ -1292,9 +1291,10 @@ The Database components allow you to create structured collections of documents,
 <Collection {collectionId} let:documents>
 	You have {documents.length} documents:
 	{#each documents as document}
-		<Document {collectionId} documentId={document.$id} {document}>
+		<Document {collectionId} documentId={document.$id} let:document let:actions>
 			Title: {document.title}
 			Text: {document.text}
+			<button on:click={() => {actions.remove()}}>Delete</button>
 		</Document>
 	{/each}
 </Collection>
