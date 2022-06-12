@@ -10,9 +10,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.3](https://github.com/koodeau/metawrite/compare/v0.7.3...v0.7.3)
+#### [v0.8.0](https://github.com/koodeau/metawrite/compare/v0.7.3...v0.8.0)
 
 - updated for sdk v8 [`257aaea`](https://github.com/koodeau/metawrite/commit/257aaea1a2ae238c0c53c0fa7a816d8f2a30ee4b)
+- BREAKING CHANGE Removed delete endpoint from the Accounts API [`5307c50`](https://github.com/koodeau/metawrite/commit/5307c503e29f61bc9266199c38f665d0c34e521b)
 
 #### [v0.7.3](https://github.com/koodeau/metawrite/compare/v0.7.2...v0.7.3)
 
