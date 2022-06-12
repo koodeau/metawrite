@@ -27,7 +27,7 @@
 {#await files}
 	<slot name="loading" />
 {:then response}
-	<slot files={response?.files ?? []} {actions} />
+	<slot files={response.files ?? []} {actions} />
 {:catch error}
 	<slot name="error" {error} />
 {/await}

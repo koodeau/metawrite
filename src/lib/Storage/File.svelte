@@ -1,17 +1,4 @@
 <script lang="ts">
-	/**
-	 * @slot {{
-	 * bucketId: string;
-	 * fileId: string;
-	 * actions: {
-	 *  download: () => URL;
-	 *  view: () => URL;
-	 *  preview: (width?: number, height?: number, quality?: number, gravity?: string, borderWidth?: number, borderColor?: string, borderRadius?: number, opacity?: number, rotation?: number, background?: string, output?: string) => URL;
-	 *  update: (read?: string[], write?: string[]) => Promise<object>;
-	 *  delete: () => Promise<object>;
-	 * }}}
-	 * @slot {{ error: object }} error
-	 */
 	import { SDK as Appwrite } from '../_appwrite';
 
 	export let bucketId: string;

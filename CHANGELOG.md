@@ -10,7 +10,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.7.3](https://github.com/koodeau/metawrite/compare/v0.7.3...v0.7.3)
+
+- updated for sdk v8 [`257aaea`](https://github.com/koodeau/metawrite/commit/257aaea1a2ae238c0c53c0fa7a816d8f2a30ee4b)
+
 #### [v0.7.3](https://github.com/koodeau/metawrite/compare/v0.7.2...v0.7.3)
+
+> 21 April 2022
 
 - Fix: type defs and documentation fixed for Document component [`4e8640f`](https://github.com/koodeau/metawrite/commit/4e8640f5e1607a4905b01f02a798b088ba5558d1)
 
@@ -247,7 +253,6 @@ All notable changes to this project will be documented in this file. Dates are d
 
 > 14 February 2022
 
-- Release v0.1.0 [`9439a1c`](https://github.com/koodeau/metawrite/commit/9439a1c675f9a0be115dc6af0bd5bcd141064d81)
 - deleted unused workflow [`e5de6ee`](https://github.com/koodeau/metawrite/commit/e5de6ee77fb94e5bef47694b5b25a1d75ebe4488)
 - Fixed: package svelte entrypoint [`54466a1`](https://github.com/koodeau/metawrite/commit/54466a12aa7d4454b502b58a8d759012c2041944)
 
@@ -255,13 +260,15 @@ All notable changes to this project will be documented in this file. Dates are d
 
 > 14 February 2022
 
+- Release v0.1.0 [`9439a1c`](https://github.com/koodeau/metawrite/commit/9439a1c675f9a0be115dc6af0bd5bcd141064d81)
 - Fixed: RecoverPassword component documentation [`6771781`](https://github.com/koodeau/metawrite/commit/67717819582ec3a8903d52debfd717ee86c91bf4)
 - Breaking Change: fixed package entry exports. Bug Fix [`2dc563f`](https://github.com/koodeau/metawrite/commit/2dc563fe01bfa947aca3e5cfcd6c5a537570f3c0)
-- modified workflows [`4fd7dc7`](https://github.com/koodeau/metawrite/commit/4fd7dc7149b9b57a55d89410b5b1f66cb9ba160c)
 
 #### [v0.0.4](https://github.com/koodeau/metawrite/compare/v0.0.3...v0.0.4)
 
 > 13 February 2022
+
+- modified workflows [`4fd7dc7`](https://github.com/koodeau/metawrite/commit/4fd7dc7149b9b57a55d89410b5b1f66cb9ba160c)
 
 #### [v0.0.3](https://github.com/koodeau/metawrite/compare/v0.0.2...v0.0.3)
 
