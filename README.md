@@ -107,128 +107,124 @@ yarn add metawrite
 			- [Directives](#directives-7)
 			- [Events](#events-4)
 			- [Example](#example-1)
-		- [`<Delete />`](#delete-)
+		- [`<Preferences />`](#preferences-)
+			- [Slots](#slots-1)
 			- [Directives](#directives-8)
 			- [Events](#events-5)
 			- [Example](#example-2)
-		- [`<Preferences />`](#preferences-)
-			- [Slots](#slots-1)
+		- [`<RecoverPassword />`](#recoverpassword-)
 			- [Directives](#directives-9)
 			- [Events](#events-6)
 			- [Example](#example-3)
-		- [`<RecoverPassword />`](#recoverpassword-)
+		- [`<Update />`](#update-)
 			- [Directives](#directives-10)
 			- [Events](#events-7)
 			- [Example](#example-4)
-		- [`<Update />`](#update-)
+		- [`<Verification />`](#verification-)
 			- [Directives](#directives-11)
 			- [Events](#events-8)
 			- [Example](#example-5)
-		- [`<Verification />`](#verification-)
-			- [Directives](#directives-12)
-			- [Events](#events-9)
-			- [Example](#example-6)
 	- [Auth](#auth)
 		- [`<AuthEmail />`](#authemail-)
 			- [Slots](#slots-2)
-			- [Directives](#directives-13)
-			- [Events](#events-10)
-			- [Example](#example-7)
+			- [Directives](#directives-12)
+			- [Events](#events-9)
+			- [Example](#example-6)
 		- [`<AuthOAuth2 />`](#authoauth2-)
 			- [Properties](#properties-4)
-			- [Example](#example-8)
+			- [Example](#example-7)
 		- [`<CreateAnonymousSession />`](#createanonymoussession-)
+			- [Directives](#directives-13)
+			- [Example](#example-8)
+		- [`<CreateJWT />`](#createjwt-)
 			- [Directives](#directives-14)
 			- [Example](#example-9)
-		- [`<CreateJWT />`](#createjwt-)
+		- [`<MagicURL />`](#magicurl-)
 			- [Directives](#directives-15)
 			- [Example](#example-10)
-		- [`<MagicURL />`](#magicurl-)
-			- [Directives](#directives-16)
-			- [Example](#example-11)
 	- [Avatars](#avatars)
 		- [`<Browser />`](#browser-)
 			- [Arguments](#arguments-8)
-			- [Directives](#directives-17)
-			- [Example](#example-12)
+			- [Directives](#directives-16)
+			- [Example](#example-11)
 		- [`<CreditCard />`](#creditcard-)
 			- [Arguments](#arguments-9)
-			- [Directives](#directives-18)
-			- [Example](#example-13)
+			- [Directives](#directives-17)
+			- [Example](#example-12)
 		- [`<Favicon />`](#favicon-)
 			- [Arguments](#arguments-10)
-			- [Directives](#directives-19)
+			- [Directives](#directives-18)
 		- [`<Flag />`](#flag-)
 			- [Arguments](#arguments-11)
-			- [Directives](#directives-20)
-			- [Example](#example-14)
+			- [Directives](#directives-19)
+			- [Example](#example-13)
 		- [`<Image />`](#image-)
 			- [Arguments](#arguments-12)
-			- [Directives](#directives-21)
-			- [Example](#example-15)
+			- [Directives](#directives-20)
+			- [Example](#example-14)
 		- [`<QR />`](#qr-)
 			- [Arguments](#arguments-13)
-			- [Directives](#directives-22)
-			- [Example](#example-16)
+			- [Directives](#directives-21)
+			- [Example](#example-15)
 	- [Database](#database)
 		- [`<Collection />`](#collection-)
 			- [Arguments](#arguments-14)
 			- [Slots](#slots-3)
-			- [Directives](#directives-23)
-			- [Example](#example-17)
+			- [Directives](#directives-22)
+			- [Example](#example-16)
 		- [`<Document />`](#document-)
 			- [Arguments](#arguments-15)
 			- [Slots](#slots-4)
-			- [Directives](#directives-24)
-			- [Example](#example-18)
+			- [Directives](#directives-23)
+			- [Example](#example-17)
 	- [Realtime](#realtime)
 			- [Arguments](#arguments-16)
-			- [Directives](#directives-25)
-			- [Example](#example-19)
+			- [Directives](#directives-24)
+			- [Example](#example-18)
 	- [Storage](#storage)
 		- [`<Storage />`](#storage-)
-			- [Directives](#directives-26)
-			- [Example](#example-20)
+			- [Directives](#directives-25)
+			- [Example](#example-19)
 		- [`<FileList />`](#filelist-)
 			- [Arguments](#arguments-17)
 			- [Slots](#slots-5)
-			- [Directives](#directives-27)
-			- [Example](#example-21)
+			- [Directives](#directives-26)
+			- [Example](#example-20)
 		- [`<File />`](#file-)
 			- [Arguments](#arguments-18)
-			- [Directives](#directives-28)
-			- [Example](#example-22)
+			- [Directives](#directives-27)
+			- [Example](#example-21)
 	- [Functions](#functions)
 		- [`<Function />`](#function-)
-			- [Directives](#directives-29)
+			- [Directives](#directives-28)
 			- [Slots](#slots-6)
-			- [Example](#example-23)
+			- [Example](#example-22)
 	- [Locale](#locale)
 		- [`<Continents />`](#continents-)
-			- [Directives](#directives-30)
+			- [Directives](#directives-29)
 			- [Slots](#slots-7)
-			- [Example](#example-24)
+			- [Example](#example-23)
 		- [`<Countries />`](#countries-)
 			- [Arguments](#arguments-19)
 			- [Slots](#slots-8)
-			- [Directives](#directives-31)
-			- [Example](#example-25)
+			- [Directives](#directives-30)
+			- [Example](#example-24)
 		- [`<Currencies />`](#currencies-)
 			- [Slots](#slots-9)
-			- [Directives](#directives-32)
-			- [Example](#example-26)
+			- [Directives](#directives-31)
+			- [Example](#example-25)
 		- [`<Languages />`](#languages-)
 			- [Slots](#slots-10)
-			- [Directives](#directives-33)
-			- [Example](#example-27)
+			- [Directives](#directives-32)
+			- [Example](#example-26)
 		- [`<Locale />`](#locale-)
 			- [Slots](#slots-11)
-			- [Directives](#directives-34)
-			- [Example](#example-28)
+			- [Directives](#directives-33)
+			- [Example](#example-27)
 		- [`<PhoneCodes />`](#phonecodes-)
 			- [Slots](#slots-12)
-			- [Directives](#directives-35)
-			- [Example](#example-29)
+			- [Directives](#directives-34)
+			- [Example](#example-28)
 - [Stack](#stack)
 
 # Usage
@@ -651,43 +647,6 @@ The Account components allow you to manage a user account.
 	<input type="password" name="password" placeholder="password" bind:value={password} />
 	<button on:click={actions.create(name, email, password)}>Create Account</button>
 </Create>
-```
-
-### `<Delete />`
-
-Deletes currently logged in user's account.
-
-#### Directives
-
-**let:actions**
-| Name | Description |
-| --- | --- |
-| `delete()` | Deletes currently logged in user. |
-
-#### Events
-
-- **on:success** On `delete` success.
-- **on:failure** On `delete` failure.
-
-#### Example
-
-```svelte
-<script>
-	import { Delete } from 'metawrite';
-
-	const success = (e) => {
-		//success callback
-		// `e` contains the user object
-	};
-
-	const failure = (e) => {
-		//failure callback
-	};
-</script>
-
-<Delete let:actions on:success on:failure>
-	<button on:click={actions.delete}>Delete my account</button>
-</Delete>
 ```
 
 ### `<Preferences />`
