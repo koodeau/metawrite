@@ -425,7 +425,7 @@ Login via an OAuth2 provider.
 </script>
 
 <AuthOAuth2
-	provider="google"
+	authProvider="google"
 	success="http://localhost:3000?success"
 	failure="http://localhost:3000?failure"
 	let:authorize
@@ -438,7 +438,7 @@ Login via an OAuth2 provider.
 
 | Name       | Description                         |
 | ---------- | ----------------------------------- |
-| `provider` | OAuth2 provider. `@type - {string}` |
+| `authProvider` | OAuth2 provider. `@type - {string}` |
 | `success`  | Success url. `@type - {string}`     |
 | `failure`  | Failure url. `@type - {string}`     |
 
@@ -930,7 +930,7 @@ The Auth components allow you to authenticate a user account.
 
 | Name            | Description                         |
 | --------------- | ----------------------------------- |
-| `provider`      | OAuth2 provider. `@type - {string}` |
+| `authProvider`      | OAuth2 provider. `@type - {string}` |
 | `success`       | Success url. `@type - {string}`     |
 | `failure`       | Failure url. `@type - {string}`     |
 | #### Directives |                                     |
@@ -945,7 +945,7 @@ The Auth components allow you to authenticate a user account.
 </script>
 
 <AuthOAuth2
-	provider="google"
+	authProvider="google"
 	success="http://localhost:3000?success"
 	failure="http://localhost:3000?failure"
 	let:authorize
