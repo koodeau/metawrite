@@ -14,7 +14,7 @@
 
 **Get free $100 credits on DigitalOcean:**
 
-<a href="https://m.do.co/c/843c1f24ad90">
+<a href="https://do.koodeau.com">
   <img src="https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white" />
 </a>
 
